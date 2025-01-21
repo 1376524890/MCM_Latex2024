@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.20)  21 JAN 2025 13:02
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.20)  21 JAN 2025 17:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1217,11 +1217,7 @@ LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
 
  [2]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 137.
-File: ./figures/Score_Difference_Over_Time.pdf Graphic file (type pdf)
-<use ./figures/Score_Difference_Over_Time.pdf>
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.95pt on input line 133.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1231,6 +1227,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [3]
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 137.
+File: ./figures/Score_Difference_Over_Time.pdf Graphic file (type pdf)
+<use ./figures/Score_Difference_Over_Time.pdf>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
 File: ./figures/WorkOverview.png Graphic file (type bmp)
 <./figures/WorkOverview.png>
 
@@ -1241,7 +1250,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4]
+[5]
 > Step: init table outer spec.
 > Step: parse table options.
 > Step: split table.
@@ -1266,7 +1275,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[5]
+[6]
 Overfull \hbox (1.95616pt too wide) in paragraph at lines 298--300
 \TU/TeXGyreTermesX(0)/m/n/12 The relationship between the above concepts, i.e., the framework of the model, is shown schemat-
  []
@@ -1278,15 +1287,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[6]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
 [7]
+File: ./figures/continue_winning.pdf Graphic file (type pdf)
+<use ./figures/continue_winning.pdf>
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1295,9 +1299,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8]
-File: ./figures/fig1.jpg Graphic file (type bmp)
-<./figures/fig1.jpg>
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1306,11 +1307,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
-File: ./figures/fig2.jpg Graphic file (type bmp)
-<./figures/fig2.jpg>
+File: ./figures/fig1.jpg Graphic file (type bmp)
+<./figures/fig1.jpg>
 
 
-LaTeX Warning: Citation '5' on page 10 undefined on input line 448.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1328,6 +1329,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
+File: ./figures/fig2.jpg Graphic file (type bmp)
+<./figures/fig2.jpg>
+
+
+LaTeX Warning: Citation '5' on page 12 undefined on input line 455.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1344,12 +1351,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [13]
-File: ./figures/fig24.jpg Graphic file (type bmp)
-<./figures/fig24.jpg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1358,7 +1359,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 677--678
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15]
+File: ./figures/fig24.jpg Graphic file (type bmp)
+<./figures/fig24.jpg>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 684--685
 [][]$[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][][] [] [][][][][][] [] [][][] []
  []
 
@@ -1369,38 +1389,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[15]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[16]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
 [17]
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 711.
 
-Underfull \hbox (badness 10000) in paragraph at lines 717--718
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18]
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 24.88pt on input line 718.
+
+Underfull \hbox (badness 10000) in paragraph at lines 724--725
 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 720.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 727.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 720.
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 720.
-LaTeX Font Info:    No file TUpcr.fd. on input line 720.
+(Font)              scaled to size 10.0pt on input line 727.
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 727.
+LaTeX Font Info:    No file TUpcr.fd. on input line 727.
 
 LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 720.
+(Font)              using `TU/lmr/m/n' instead on input line 727.
 
 (./code/mcmthesis-matlab1.m
 
@@ -1424,7 +1436,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[18])
+[19])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1432,9 +1444,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[19]
+[20]
 \c@lastpage=\count490
- [20] 
+ [21] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./mcmthesis-demo.aux)
  ***********
@@ -1451,14 +1463,8 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `mcmthesis-demo.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `mcmthesis-demo.out':
-(rerunfilecheck)             Before: 9D42DC9F217C958437671908513BF13D;7660
-(rerunfilecheck)             After:  3BED64DB07EF2721AE596EBE631CA057;7973.
+Package rerunfilecheck Info: File `mcmthesis-demo.out' has not changed.
+(rerunfilecheck)             Checksum: 0745FA207018BCED2A4CA90B40A7F63B;7973.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                mcmthesis-demo
@@ -1469,12 +1475,12 @@ Package logreq Info: Writing requests to 'mcmthesis-demo.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29145 strings out of 476720
- 562652 string characters out of 5801444
+ 29158 strings out of 476720
+ 563040 string characters out of 5801444
  1963842 words of memory out of 5000000
- 50723 multiletter control sequences out of 15000+600000
+ 50735 multiletter control sequences out of 15000+600000
  572961 words of font info for 105 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  87i,18n,117p,1879b,2101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mcmthesis-demo.pdf (20 pages).
+Output written on mcmthesis-demo.pdf (21 pages).

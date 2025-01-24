@@ -58,7 +58,7 @@
 %%
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,    % 使用 CTeX 套装时，设置为 true
-          tcn = {114514}, problem = \textcolor{red}{C},
+          tcn = {2518438}, problem = \textcolor{red}{B},
           sheet = true, titleinsheet = true, keywordsinsheet = true,
           titlepage = false, abstract = false}
         
@@ -68,10 +68,11 @@
 \usepackage{caption} % for table caption
 \usepackage{tocloft}
 \usepackage{hyperref}
+\usepackage{tabularray}
 \setlength{\cftbeforesecskip}{6pt}
 \renewcommand{\contentsname}{\hspace*{\fill}\Large\bfseries Contents \hspace*{\fill}}
 
-\title{Changing Tides: Momentun Swings in Tennis}
+\title{Managing Sustainable Tourism}
 % \author{\small \href{http://www.latexstudio.net/}
 %   {\includegraphics[width=7cm]{mcmthesis-logo}}}
 \date{\today}
@@ -80,45 +81,46 @@
 
 \begin{abstract}
 
-  Situations change rapidly in tennis, and the incredible swings are often attributed to \textbf{momentum}. 
-  We analyze momentum through Wimbledon 2023 men’s matches data.\par
-  For Task 1, we develop a \textbf{Leverage Quantitative Momentum Capture Model}. Firstly,
-  we consider the effect of short-term motivation and confidence boosting on serve percentage,
-  and utilize the \textbf{Monte Carlo} algorithm to compute the winning probability(match/set/game)
-  at each point. Then we define \textbf{Leverage} as how much winning or losing a ball changes the
-  winning probability and the momentum as \textbf{exponential moving average} of leverage. Finally,
-  the Wimbledon final match flow is visualized and the results are shown.\par
-  For Task 2, we use a statistical test to verify that "momentum" does play role in the match.
-  Through the \textbf{run test}, we found that at a $90\%$ confidence level, the proportion of non-random
-  game scores in the given dataset accounts for $45.11\%$ of the total, which indicates the swings in
-  the game are not random. Furthermore, through the contingency table independence test, we
-  determine, at a $90\%$confidence level, that swings in play and runs of success by one player are
-  correlated to the momentum.\par
-  For Task 3, we establish the \textbf{Grid-Search Random Forest Swing Predictor Model} to forecast short-term 
-  swings in momentum.We select 43 indicators as inputs for the model to predict
-  \textbf{momentum transition scenarios} (no transition of advantage, the advantage tilting towards
-  oneself, the advantage transitioning to the opponent) in the next s points. The model achieved a
-  $94\%$ successful classification rate on the training set, demonstrating good classification performance. 
-  Utilizing GSRF, we can also identify that the factor most related to match fluctuations
-  is the \textbf{opponent’s total score}.\par
-  It is necessary to consider he top 15 factors in the GSRF model in terms of feature importance,
-  so the four factors of dimensionality reduction into \textbf{Expenditure, Expenditure, Running
-  Distance, and Game Situation Factor} are utilized by \textbf{factor analysis}. We suggest players
-  focus on improving physical fitness, enhancing mental resilience, and paying special attention
-  to break and net point scoring techniques.\par
-  For Task 4 , by modifying the Monte Carlo simulation winning rule to \textbf{three sets to two
-  wins1}, we apply the model in the 2023 \textbf{Wimbledon women’s singles final}, which verifies that
-  the model is generalizable. It is worth noting that the most related factor of swing in women’s
-  tennis is different from that in men’s singles, it is precise \textbf{the total running distance}, which
-  may be be related to the physical strength difference between men and women.\par
-  We conduct \textbf{sensitivity analysis} on the parameters of the short-term motivation effect in
-  the Leverage Quantitative Momentum Capture Model and the parameters in the GSRF Swing
-  Predictor Model, which are low in sensitivity and have high robustness.\par
-  Finally, a one-page memo with suggestions to tennis coaches is also produced to help coaches
-  instruct players to control the pace of play.
-  
+  We have developed a \textbf{sustainable development model} applicable to the city of Juneau and 
+other tourist destinations to address the challenges posed by the rapid growth of tourism
+on infrastructure, the natural environment, and resident satisfaction.\par  
+For Task 1, we have developed a \textbf{multi-objective optimization model} based on the 
+\textbf{Non-dominated Sorting Genetic Algorithm III (NSGA-III)}, where the dual optimization 
+objectives are the maximization of economic benefits and the minimization of carbon emissions. 
+Economic benefits are quantified through the number of tourists, while carbon emissions 
+are used as a \textbf{key indicator of sustainability}. The model introduces three key constraints:  
+The \textbf{maximum capacity of infrastructure},
+The \textbf{upper limit of tourist numbers},
+The \textbf{threshold for resident satisfaction}.
+Resident satisfaction is derived from a weighted analysis of dissatisfaction data in the 
+survey report, with a \textbf{$15\%$ dissatisfaction threshold} set (based on the actual 
+dissatisfaction rate of $16\%$ in 2023). Furthermore, this study has established additional 
+expenditure plans covering three areas:
+\textbf{Environmental protection},
+\textbf{Infrastructure development}, 
+\textbf{Community projects}. 
+For task 2, we classifies different types of tourist destinations through \textbf{cluster analysis}, 
+focusing on the differential characteristics of \textbf{core indicators} such as tourist numbers, 
+infrastructure carrying capacity, and tourism revenue. Based on the classification results, 
+the constraints and parameters of the model are \textbf{dynamically adjusted and optimized} to enhance its 
+universality and flexibility, ensuring its applicability to various types of destinations affected 
+by overtourism.\par
+
+For task 3, we prepared a \textbf{policy recommendation memorandum} building on the empirical findings to 
+provide scientific decision-making support for the sustainable development of tourism in Juneau 
+City. The memorandum highlights \textbf{key conclusions} derived from the model's empirical analysis and 
+proposes \textbf{actionable policy recommendations}.\par
+
+All in all, the tasks are \textbf{interconnected both theoretically and practically}: Task 1 establishes the \textbf{foundational 
+model}, providing methodological support for subsequent research; Task 2 extends and optimizes the 
+model, enhancing its \textbf{applicability and scalability}; Task 3 returns to the practical level, offering 
+\textbf{empirical evidence} for policy formulation. Innovatively, we have developed a \textbf{scalable optimization 
+model} for sustainable tourism development, which not only serves as a decision-making reference for 
+Juneau City but also provides a \textbf{replicable analytical framework} and methodological guidance for the 
+sustainable development of similar tourist destinations.
+
 \begin{keywords}
-  Monte Carlo Simulation, Runs Test, GSRF, Factor Analysis
+  Sustainable Development, NSGA-III, Over-tourism, Multi-objective Optimization
 \end{keywords}
 
 \end{abstract}
@@ -136,63 +138,50 @@
 
 \subsection{Background}
 
-Tennis matches are exciting and ever-changing. Players who seem to be dominating experience incredible swings 
-from time to time. For example, a player may be in control of the
-match with a series of points, but at one rally, the opponent suddenly breaks and the situation is
-reversed. We often attribute this dramatic turn of events to "momentum".\par
-"Momentum" heightens emotional intensity in the match, creating unpredictability and
-anticipation, making each moment charged and intense.
+As the capital of Alaska, Juneau has a permanent population of approximately $30,000$. In recent years, 
+tourism has become a key driver of its economic growth, contributing an annual revenue of approximately 
+$\$375$ million. However, the rapid growth of tourism, particularly during peak seasons in Juneau, has led to 
+a daily influx of up to $20,000$ visitors.These phenomena pose significant challenges to the local 
+social, economic, and environmental fabric. Specifically, issues such as the overburdening of urban 
+infrastructure, a decline in residents' quality of life, and environmental degradation have become 
+increasingly evident.\par
+% Among these challenges, Mendenhall Glacier—one of Juneau's iconic attractions—is facing the dual 
+% pressures of global warming and increased carbon emissions resulting from tourism activities, which 
+% are accelerating its rate of melting. These not only pose a threat to the long-term appeal of 
+% Juneau as a tourist destination, but also raise concerns among local residents about the 
+% sustainability of tourism.Besides, the ongoing retreat of the glacier could lead to a decline in 
+% tourist numbers, which in turn would undermine the stability of the local economy.\par
+In light of these issues, Juneau urgently requires the development and implementation of a 
+scientifically-based sustainable tourism strategy that balances economic benefits, tourist 
+experience, and environmental conservation. This case study not only highlights the typical 
+challenges faced by Juneau as a climate-sensitive tourism destination but also offers valuable 
+insights for other regions worldwide grappling with similar issues. The research on the sustainable 
+development of Juneau's tourism industry provides both theoretical foundations and practical 
+guidance for reconciling the demands of tourism growth with the need for ecological preservation in 
+diverse contexts.
 
 \begin{figure}[h] 
   \centering
-  \includegraphics[width=12cm]{Score_Difference_Over_Time.pdf}
-  \caption{The fast-changing, heart-stopping swings of a tennis match.} \label{fig1}
+  \includegraphics[width=14cm]{totaltour_1.pdf}
+  \caption*{Noted: Passenger volumes in 2022 decreased due to COVID-19}\label{fig1}
   \end{figure}
 
   \subsection{Restatement and Analysis of the Problem}
 
-  We need to complete the following tasks based on the data given in the question and
-  additional data from ourselves:
-  \begin{itemize}
-    \item \textbf{Task 1: Build a model to capture the flow of play as points occur.} 
-    The model is required to be able to qualitatively and quantitatively describe 
-    performance of players at a given time and provide a visualization. In particular,
-    the model should take the higher probability of the server winning into account.
-    \item \textbf{Task 2: Assess whether swings in play and runs of success by one player during a match 
-    are random.}
-    \item \textbf{Task 3: Look for indicators that identify the point in time when the game situation is reversed.}
-    \begin{itemize}
-      \item Develop a model to predict swings in a match. Find the indicator with the highest correlation.
-      \item Based on momentum swings in past games, we need to give players advice on how to deal with other opponents.
-    \end{itemize}
-    \item \textbf{Task 4: Evaluate the generalisability of the model we have developed to other competitions.}
-    \item \textbf{Task 5: Write a memo summarising the results and giving targeted advice to coaches and players.}
-  \end{itemize}
-
-After some analysis, we found that there is a close relationship between the tasks: In Task
-1 and Task 2, we need to build a model describing the situation of the game (i.e. the relative
-performance of two players) and explore the relationship between "momentum" and changes in
-the game situation, respectively. The results of these two tasks are the basis of task 3. In task
-3, we need to further build a model that can predict the situation fluctuations in the competition
-and find out the key factors that affect the competition. We also need to start to consider the
-applicability of our model. Can it provide competition suggestions for players to achieve better
-results? The fourth task is to consider the extensibility of our model. Are we still valuable in
-other competitions? Finally, in the memo, we need to focus on our model and its value.
-
-In summary, we should effectively build a model that can predict the fluctuations of the
-competition situation, provide practical advice to players and coaches, and be extensible across
-different competitions.
-\subsection{Overview of Our Work}
-
-On the basis of the above analysis, we have carried out our work. Our working framework
-is shown in Figure 2.
-
-\begin{figure}[h] 
-  \centering
-  \includegraphics[width=12cm]{WorkOverview.png}
-  \caption{How To Draw?} \label{fig2}
+  We aim to explore key issues in the sustainable development of tourism by constructing a 
+  multi-objective optimization model. Our research tasks primarily consist of the following three 
+  interrelated aspects:
+\begin{itemize}
+  \item \textbf{Task 1:  Tourism Sustainability Optimization Framework} This task establishes a comprehensive analytical system combining multivariate regression, input-output analysis, and multi-objective optimization to quantify tourism-environment interactions and optimize investment strategies. Based on literature research and existing survey data, we construct a multiple regression model to examine the relationships between carbon emissions, economic benefits of tourism, glacier melting rates, resident satisfaction, and tourist numbers. Building on this basis, an input-output analysis will be used to assess the investment effectiveness in three areas: environmental protection (carbon reduction), infrastructure development, and community programs. Subsequently, a multi-objective optimization model will be developed using the NSGA-III algorithm. This model will integrate the objective functions and constraints, aiming to determine the optimal tourist carrying capacity and investment allocation plan, followed by a sensitivity analysis of key parameters.
+  \begin{figure}[h!] 
+    \centering
+    \includegraphics[width=12cm]{Work_review.pdf}
+    \caption{Tourism Sustainability Optimization Framework} \label{fig2}
   \end{figure}
-  The detailed modeling process and model details are presented in the following article.
+  \item \textbf{Task 2: Data-driven adaptability Summary.} This task develops a dynamic clustering methodology to implement differentiated management strategies for diverse tourism destinations. A clustering analysis will be conducted to classify different types of tourist destinations, with a focus on examining the differential characteristics of core indicators such as tourist numbers, infrastructure carrying capacity, and tourism revenue. Based on the classification results, the constraint parameters of the optimization model will be dynamically adjusted to ensure the model's adaptability and flexibility in addressing overtourism impacts at different types of destinations.
+  \item \textbf{Task 3: Evidence-based memo writing.} This task translates quantitative findings into actionable governance tools for sustainable tourism management. Based on the empirical research findings, a policy recommendation memorandum will be drafted to provide scientific decision-making support for the sustainable development of Juneau's tourism industry. The memorandum will focus on the key conclusions derived from the model's empirical analysis and offer actionable policy recommendations.
+  \end{itemize}
+  There is a significant theoretical and practical connection between the tasks outlined above: The foundational model developed in Task 1 provides the methodological support for subsequent research; 
 
 \section{Assumptions and Justification}
 To simplify the problem and make it convenient for us to simulate real-life conditions, we
@@ -208,7 +197,7 @@ conditioning on a physiological level.
 \end{itemize}
 \section{List of Notation}
 
-\begin{table}[h]
+\begin{table}[h!]
   \centering
   \begin{tblr}{
     colspec = {X[c]X[c]}, % 自动调整列宽
@@ -216,15 +205,15 @@ conditioning on a physiological level.
     hline{1-2,9} = {-}{},
   }
   \textbf{Symbol} & \textbf{Meaning} \\
-  $p,q$      & Probability of Winning       \\
-  $m_i$      & Increase in the Rate of Serve points       \\
-  $T_{AB}$   & The Cumulative Total Score       \\
-  $L_i$      & Leverage of the $i$th Point       \\
-  $G$        & The leverage Gained       \\
-  $M$        & Momentum       \\
-  $\lambda$  & Tuning Parameter       
+  $V_i$      & Visitor Volume      \\
+  $TA^\alpha$      & Tax Allocation in area $\alpha$     \\
+  $TR_i$   & Tourism Revenue      \\
+  $S_i$      & Resident Satisfaction       \\
+  $G_i$        & Glacier Melt Volume      \\
+  $C_i$        & Carbon Emissions      \\
+  $P_i$  & Infrastructure Pressure      
   \end{tblr}
-  \caption*{Noted: Symbols not specified in the table should be referred to their first occurrence.} 
+  \caption*{Noted: Footmark $i$ means in year $i$} 
 \end{table}
 
 \section{Data Pre-processing}
@@ -379,6 +368,13 @@ on this understanding, \textbf{players gain confidence in serving games.} Due to
 boost," we have incorporated the player’s performance in serving games into consideration in
 our model.
 \subsubsection{Monte Carlo Simulation for Winning Probability}
+As a sports competition, there is a great deal of uncertainty in tennis, for which Monte Carlo
+algorithms can provide probabilistic estimates of the outcome.\par
+Based on the serve success rate obtained in the previous section, we use the Monte Carlo
+algorithm to simulate each ball, and ultimately obtain the winners and losers of each game, set
+and even the whole match. Then in this process, the randomness and diversity of the simulation
+are ensured by generating a large number of random number seeds.\par
+Here is the pseudo-code for the algorithm we used:\par
 \begin{center}
 \begin{tabular}{clc}
 {\bf Symbols} & {\bf Description} & \quad {\bf Unit} \\[0.25cm]

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .node circle {
+            fill: #fff;
+            stroke: #4CAF50;
+            stroke-width: 2px;
+        }
+
+        .node text {
+            font: 12px Arial;
+        }
+
+        .link {
+            fill: none;
+            stroke: #ccc;
+            stroke-width: 1.5px;
+        }
+
+        .node {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="mindmap"></div>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        // 定义思维导图数据结构
+        const data = {
+            name: "可持续旅游模型",
+            children: [
+                {
+                    name: "核心问题",
+                    category: "problem",
+                    children: [
+                        { name: "目标：平衡经济/环境/社会福祉" },
+                        { name: "挑战：冰川退缩、基础设施压力、居民不满" }
+                    ]
+                },
+                {
+                    name: "模型构建",
+                    category: "model",
+                    children: [
+                        { 
+                            name: "优化目标",
+                            children: [
+                                { name: "最大化：经济收益" },
+                                { name: "最小化：环境破坏、社会压力" }
+                            ]
+                        },
+                        {
+                            name: "约束条件",
+                            children: [
+                                { name: "游客上限 (20,000人/天)" },
+                                { name: "碳排放阈值" },
+                                { name: "基础设施承载能力" }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "支出计划",
+                    category: "finance",
+                    children: [
+                        { name: "环保措施 (40%)" },
+                        { name: "基础设施 (30%)" },
+                        { name: "社区项目 (20%)" },
+                        { name: "营销分散 (10%)" }
+                    ]
+                }
+            ]
+        };
+
+        // 颜色编码
+        const colorScale = d3.scaleOrdinal()
+            .domain(["problem", "model", "finance"])
+            .range(["#e41a1c", "#377eb8", "#4daf4a"]);
+
+        // 定义画布尺寸
+        const width = 1200, height = 800;
+        const svg = d3.select("#mindmap")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g")
+            .attr("transform", "translate(100,50)");
+
+        // 树布局配置
+        const treeLayout = d3.tree()
+            .size([height - 200, width - 200]);
+
+        // 生成层次数据
+        const root = d3.hierarchy(data);
+        treeLayout(root);
+
+        // 绘制连接线
+        const links = svg.selectAll(".link")
+            .data(root.links())
+            .enter().append("path")
+            .attr("class", "link")
+            .attr("d", d3.linkHorizontal()
+                .x(d => d.y)
+                .y(d => d.x));
+
+        // 绘制节点
+        const nodes = svg.selectAll(".node")
+            .data(root.descendants())
+            .enter().append("g")
+            .attr("class", "node")
+            .attr("transform", d => `translate(${d.y},${d.x})`);
+
+        // 添加圆形节点
+        nodes.append("circle")
+            .attr("r", 6)
+            .style("fill", d => d.data.category ? colorScale(d.data.category) : "#fff");
+
+        // 添加文本标签
+        nodes.append("text")
+            .attr("dx", d => d.children ? -12 : 12)
+            .attr("dy", 4)
+            .style("text-anchor", d => d.children ? "end" : "start")
+            .text(d => d.data.name);
+
+        // 交互功能：点击折叠/展开
+        nodes.filter(d => d.children).on("click", toggle);
+
+        // 初始状态展开所有节点
+        root.descendants().forEach(d => d._children = d.children);
+        toggle(root);
+
+        // 节点折叠函数
+        function toggle(d) {
+            if (d.children) {
+                d._children = d.children;
+                d.children = null;
+            } else {
+                d.children = d._children;
+                d._children = null;
+            }
+            update(d);
+        }
+
+        // 更新布局函数
+        function update(source) {
+            treeLayout(root);
+
+            // 更新连接线
+            svg.selectAll(".link")
+                .data(root.links())
+                .transition()
+                .duration(500)
+                .attr("d", d3.linkHorizontal()
+                    .x(d => d.y)
+                    .y(d => d.x));
+
+            // 更新节点位置
+            svg.selectAll(".node")
+                .data(root.descendants())
+                .transition()
+                .duration(500)
+                .attr("transform", d => `translate(${d.y},${d.x})`);
+        }
+    </script>
+</body>
+</html>

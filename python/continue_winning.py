@@ -2,78 +2,123 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from collections import defaultdict
 
-# 读取CSV文件
-df = pd.read_csv('g:\\MCM_Latex2024\\data\\Wimbledon_featured_matches.csv')
+# ------------------------------
+# 1. 数据加载与预处理
+# ------------------------------
+df = pd.read_csv('data/Wimbledon_featured_matches.csv')
 
-# 初始化连胜计数器和动态字典
-streak_count = 0
-streaks = defaultdict(int)  # 使用 defaultdict 支持任意长度的连胜
+# 初始化统计变量
+current_player = None
+current_streak = 0
+streak_counts = defaultdict(int)
+zero_streak_count = 0
 
-# 遍历每一行数据，计算连胜次数
-for i in range(len(df)):
-    if i == 0 or df.loc[i, 'point_victor'] == df.loc[i - 1, 'point_victor']:
-        streak_count += 1
+# ------------------------------
+# 2. 计算连续得分次数
+# ------------------------------
+for victor in df['point_victor']:
+    if victor == current_player:
+        current_streak += 1
     else:
-        streaks[streak_count] += 1
-        streak_count = 0  
+        if current_streak == 1:
+            zero_streak_count += 1
+        elif current_streak > 1:
+            streak_counts[current_streak - 1] += 1
+        current_player = victor
+        current_streak = 1
 
-# 处理最后一行的连胜
-if streak_count > 0:
-    streaks[streak_count] += 1
+# 处理最后一段得分
+if current_streak == 1:
+    zero_streak_count += 1
+elif current_streak > 1:
+    streak_counts[current_streak - 1] += 1
 
-# 将结果转换为普通字典（可选）
-streaks = dict(streaks)
+# ------------------------------
+# 3. 动态生成分类标签
+# ------------------------------
+observed_streaks = sorted([k for k in streak_counts.keys() if k >= 1])
+max_streak = max(observed_streaks) if observed_streaks else 0
+categories = ['0'] + [str(s) for s in observed_streaks if 1 <= s <= 3] + [str(s) for s in observed_streaks if s >= 4]
 
-# 提取连胜次数和对应的频数
-streak_lengths = list(streaks.keys())
-streak_frequencies = list(streaks.values())
+# 合并统计结果
+merged_counts = {'0': zero_streak_count}
+for cat in categories[1:]:
+    merged_counts[cat] = streak_counts.get(int(cat), 0)
 
-# 设置全局字体样式
-plt.rcParams['font.family'] = 'Times New Roman'
-plt.rcParams['font.size'] = 12
+# ------------------------------
+# 4. 可视化设置
+# ------------------------------
+# 专业配色方案
+palette = {
+    '0': '#E63946',    # 红色：交替得分
+    '1-3': '#2A9D8F',  # 青色：短连胜
+    '4+': '#264653'    # 深灰：长连胜
+}
 
-# 创建图形
-plt.figure(figsize=(10, 6))
-
-# 定义颜色映射函数
-def get_color(streak_length):
-    if streak_length == 0:
-        return 'gray'  # 0 次连胜
-    elif 1 <= streak_length <= 3:
-        return 'skyblue'  # 1-3 次连胜
+colors = []
+for cat in categories:
+    if cat == '0':
+        colors.append(palette['0'])
+    elif 1 <= int(cat) <= 3:
+        colors.append(palette['1-3'])
     else:
-        return 'orange'  # 4 次以上连胜
+        colors.append(palette['4+'])
 
-# 绘制柱状图，并根据连胜长度设置颜色
-bars = plt.bar(streak_lengths, streak_frequencies, 
-               color=[get_color(n) for n in streak_lengths], 
-               edgecolor='black', alpha=0.8)
+# 创建画布
+plt.figure(figsize=(14, 8))
+bars = plt.bar(categories, 
+               [merged_counts[cat] for cat in categories], 
+               color=colors, 
+               edgecolor='white', 
+               linewidth=1.2, 
+               width=0.7)
 
-# 在柱状图顶端添加数字
+
+# ------------------------------
+# 6. 图表美化
+# ------------------------------
+plt.title('Wimbledon Match: Consecutive Points Analysis', 
+         fontsize=16, fontweight='bold', pad=20, color='#2B2D42')
+plt.xlabel('Consecutive Points Won', fontsize=12, labelpad=10, color='#2B2D42')
+plt.ylabel('Frequency', fontsize=12, labelpad=10, color='#2B2D42')
+
+# 坐标轴优化
+plt.xticks(rotation=45, ha='right', fontsize=10, color='#2B2D42')
+plt.yticks(fontsize=10, color='#2B2D42')
+plt.grid(axis='y', linestyle='--', alpha=0.7, color='#DEE2E6')
+
+# 数据标签
 for bar in bars:
     height = bar.get_height()
-    plt.text(bar.get_x() + bar.get_width() / 2, height, str(int(height)),
-             ha='center', va='bottom', fontsize=12, color='black')
+    if height > 0:
+        plt.text(bar.get_x() + bar.get_width()/2, 
+                 height + 0.5, 
+                 f'{height}', 
+                 ha='center', 
+                 va='bottom',
+                 fontsize=10,
+                 color='#2B2D42')
 
-# 设置标题和标签
-plt.xlabel('Winning Streak Length (n)', fontsize=14, labelpad=10)
-plt.ylabel('Frequency', fontsize=14, labelpad=10)
-plt.title('Frequency of n-Winning Streaks', fontsize=16, pad=20)
-
-# 添加网格线
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-
-# 添加图例
-from matplotlib.patches import Patch
+# ------------------------------
+# 7. 图例定位优化（右上角内部）
+# ------------------------------
 legend_elements = [
-    Patch(facecolor='gray', edgecolor='black', label='0 Streak'),
-    Patch(facecolor='skyblue', edgecolor='black', label='1-3 Streaks'),
-    Patch(facecolor='orange', edgecolor='black', label='4+ Streaks')
+    plt.Rectangle((0,0),1,1, fc=palette['0'], edgecolor='white'),
+    plt.Rectangle((0,0),1,1, fc=palette['1-3'], edgecolor='white'),
+    plt.Rectangle((0,0),1,1, fc=palette['4+'], edgecolor='white')
 ]
-plt.legend(handles=legend_elements, loc='upper right', fontsize=12)
 
-# 调整布局
+# 关键修改：将图例定位到图表内部右上角
+plt.legend(legend_elements,
+           ['Alternating Points', 'Short Streaks (1-3)', 'Long Streaks (4+)'],
+           loc='upper right',
+           bbox_to_anchor=(0.98, 0.98),  # 紧贴右上角
+           frameon=True,
+           framealpha=0.9,
+           edgecolor='#DEE2E6',
+           fontsize=10)
+
+# 调整边距
 plt.tight_layout()
-
-# 显示图形
+plt.subplots_adjust(top=0.85, right=0.95)  # 确保右侧空间充足
 plt.show()

@@ -94,11 +94,15 @@ The \textbf{maximum capacity of infrastructure},
 The \textbf{upper limit of tourist numbers},
 The \textbf{threshold for resident satisfaction}.
 Resident satisfaction is derived from a weighted analysis of dissatisfaction data in the 
-survey report, with a \textbf{$15\%$ dissatisfaction threshold} set (based on the actual 
-dissatisfaction rate of $16\%$ in 2023). Furthermore, this study has established additional 
+survey report, with a 
+% \textbf{$15\%$ dissatisfaction threshold} 
+limit set based on the actual 
+dissatisfaction rate of recent years. 
+% $16\%$ in 2023). 
+Furthermore, this study has established additional 
 expenditure plans covering \textbf{Community projects} by these areas:
 \textbf{Environmental protection},
-\textbf{Infrastructure development}. \\
+\textbf{Infrastructure development}. \par
 For task 2, we classifies different types of tourist destinations through \textbf{cluster analysis}, 
 focusing on the differential characteristics of \textbf{core indicators} such as tourist numbers, 
 infrastructure carrying capacity, and tourism revenue. Based on the classification results, 
@@ -210,7 +214,7 @@ make the following basic assumptions, each of which is properly justified.
   $S_i$      & Resident Satisfaction       \\
   $G_i$        & Glacier Melt Volume      \\
   $C_i$        & Carbon Emissions      \\
-  $P_i$  & Infrastructure Pressure      
+  $S_i$  & Infrastructure Stress      
   \end{tblr}
   \caption*{Noted: Footmark $i$ means in year $i$} 
 \end{table}
@@ -314,6 +318,58 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
     {\includegraphics[width=12cm]{Satisfaction Questionnaire.pdf}} % 减小宽度留出边框空间
     \caption{Result of Satisfaction Questionnaire} \label{fig:satisfy}
   \end{figure}
+  \item \textbf{Calculation of Daily Visitor Distribution}\par
+  Based on the annual total of 1,638,902 cruise visitors in Juneau City Port in 2023 and the recorded days exceeding daily visitor thresholds (Table \ref{tab:thresholds}), we assume the daily visitor count
+  \begin{table}[h!]
+    \centering
+    \caption{Daily Visitor Thresholds and Exceedance Days in 2023}
+    \label{tab:thresholds}
+    \rowcolors{2}{gray!10}{white} % 斑马纹：偶数行浅灰填充，奇数行白色
+    \begin{tabular}{cc}
+      \toprule
+      \rowcolor{gray!20} % 单独设置表头背景色
+      \textbf{Daily Visitor Threshold (visitors/day)} & \textbf{Days Exceeding Threshold (days)} \\
+      \midrule
+      5,000  & 40 \\
+      6,000  & 40 \\
+      7,000  & 39 \\
+      8,000  & 37 \\
+      9,000  & 30 \\
+      10,000 & 25 \\
+      11,000 & 22 \\
+      12,000 & 15 \\
+      13,000 & 13 \\
+      14,000 & 9  \\
+      15,000 & 6  \\
+      16,000 & 4  \\
+      17,000 & 3  \\
+      18,000 & 2  \\
+      19,000 & 1  \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  $V^{daily}$ follows a normal distribution $\mathcal{N}(\mu, \sigma^2)$. The probability distribution fitting proceeds as follows:
+  $$\mu = \frac{1{,}638{,}902}{365} \approx 4{,}490.1 \, \text{visitors/day}$$
+  The daily average visitor count is derived from the annual total.\\
+  For each visitor threshold $v^{daily}_i$, its cumulative probability is computed as:
+  $$P(V^{daily} \leq v^{daily}_i) = \frac{365 - D_i}{365}$$
+  where $D_i$ denotes the number of days exceeding $v^{daily}_i$. The corresponding standard normal quantile is obtained using the inverse cumulative distribution function:
+  $$Z_i = \Phi^{-1} \left( P(V^{daily} \leq v^{daily}_i) \right)$$
+  A regression relationship between the standardized variable and visitor count is established:
+  $$v^{daily}_i - \mu = \sigma Z_i + \epsilon$$
+  An intercept-free regression model is employed for fitting, yielding an estimated standard deviation $\sigma = 4589.3$ in Figure \ref{fig:dailyvisitor}.\par
+  In summary, the daily tourist volume in Juneau City approximately follows a normal distribution 
+  \begin{equation}
+    \label{eq:dailyvisitor}
+    \mathcal{N}(\mu, (4589.3)^2)
+  \end{equation}
+  \begin{figure}[h!] 
+    \centering
+    {\includegraphics[width=15cm]{dailyvisitor.pdf}} % 减小宽度留出边框空间
+    \caption{Daily Visitor Distribution} 
+    \label{fig:dailyvisitor}
+  \end{figure}
+  
 \end{itemize}
 % \item 
 
@@ -354,9 +410,9 @@ Based on this analysis, we established a quadratic regression model with tempora
 \end{equation}
 Substituting estimated parameters yields:
 \begin{equation}
-  V_c = \frac{1,198,962}{2 \times 337,702} \approx 1.77 \text{ million}
+  V_c = \frac{1,198,962}{2 \times 337,702} \approx 1.78 \text{ million}
 \end{equation}
-This demonstrates that when Juneau's tourist numbers exceed 1.77 million visitors per year, subsequent growth in tourism will lead to a significant increase in local CO₂ emissions, causing environmental degradation through accelerated glacier melting and other ecological consequences.
+This demonstrates that when Juneau's tourist numbers exceed 1.78 million visitors per year, subsequent growth in tourism will lead to a significant increase in local CO₂ emissions, causing environmental degradation through accelerated glacier melting and other ecological consequences.
 \subsubsection{Tourism revenue regression model}
 We employed regression analysis to investigate the quantitative relationship between tourist volume and tourism revenue. The linear regression model constructed based on the least squares method is as follows:
 \begin{equation}
@@ -386,34 +442,28 @@ The model results demonstrate a statistically significant positive impact of tou
 A significant feedback effect emerges from satisfaction to glacial status (path coefficient: $0.587$,$ **p < 0.01$), indicating that heightened satisfaction may drive stricter glacial protection policies (e.g., tourist capacity restrictions), thereby alleviating glacial pressure.\par
 Notably, while the negative impact of carbon emissions on satisfaction lacks statistical significance (path coefficient: $-0.204$, $p > 0.05$), its directional tendency implies potential indirect erosion of public satisfaction through environmental quality deterioration.\par
 \textbf{Comprehensive Analysis:}\par
-The integrated findings reveal a U-shaped correlation between tourist volume and resident satisfaction. Short-term tourism growth enhances satisfaction through economic benefits, whereas excessive long-term tourism may reduce satisfaction through \textbf{Intensified greenhouse gas emissions} and \textbf{Infrastructure pressure} 
+The integrated findings reveal a U-shaped correlation between tourist volume and resident satisfaction. Short-term tourism growth enhances satisfaction through economic benefits, whereas excessive long-term tourism may reduce satisfaction through \textbf{Intensified greenhouse gas emissions} and \textbf{Infrastructure pressure} \par
 \begin{figure}[h!] 
   \centering
   \includegraphics[width=12cm]{sem_diagram_final.pdf}
   \caption{SEM for Resident Satisfaction Surveys} \label{fig:sem}
 \end{figure}
-\subsubsection{To be continue}
-Since a relatively large number of concepts are introduced in our model, we first identify
-and clarify the meaning of the introduced concepts here.
+All in all,we get the following conclusions:
+\begin{equation}
+  1 - S_i = 76.62 - 0.574 V_i^M + 0.0129 \left( V_i^M \right)^2
+\end{equation}
+\subsubsection{Infrastructure Stress Analysis}
+As the majority of tourists visiting Juneau City opt for maritime transportation, the substantial influx of visitors imposes significant strain on the port facilities and adjacent public transportation infrastructure. Based on the 2023 survey report, our analysis indicates that the maximum daily capacity of the port’s traffic system is approximately 14,000 individuals per day. Exceeding this threshold would result in substantial tourist overcrowding. Consequently, we define the transportation infrastructure capacity limit of Juneau City as the condition under which tourist volume remains below this maximum capacity for no more than 97.5\% of days annually. The daily tourist volume is approximated to follow a normal distribution throughout the year as \eqref{eq:dailyvisitor}.\par  
+\subsubsection{Input-output of additional expenditure by sector}
+We collected relevant information to determine the input-output of additional spending in different areas to determine our additional spending plan.
 \begin{itemize}
-  \item \textbf{Short-term Motivation} refers to a brief period of above-average performance by a player
-  following a motivating event.
-  \item \textbf{Confidence Boost} is when a player, drawing upon their self-awareness developed through
-  multiple games in their professional career and an assessment of the current situation,
-  generates positive expectations regarding the outcome of the match.
-  \item \textbf{Serve Success Rate} is probability of scoring in a service game.
-  \item \textbf{Winning Probability} is the likelihood of the player winning the game/set/match.
-  \item \textbf{Leverage} measures how a ball’s outcome impacts the margin of victory.
-  \item \textbf{Momentum} aims to describe which player is in control at any given point in the
-  match—based on who is currently winning more points and who is prevailing in crucial
-  (high-leverage) moments. It is defined as a player’s exponentially weighted leverage
-  average.\par
-  At each point in the match, both competing players will have their own momentum values.
-  \item We define the fluctuations in momentum as the \textbf{Flow of Play.}
-\end{itemize}
-The relationship between the above concepts, i.e., the framework of the model, 
-is shown schematically below, and in the following we show the model building process in full.
-\subsection{Leverage Quantitative Momentum Capture Model}
+  \item \textbf{Input-output in the field of carbon emission reduction:} We have examined an environmental justice initiative entitled the Alaska Carbon Reduction Fund, implemented by Renewable Juneau, a non-profit organization based in Juneau. This project allocates funds to replace oil-fired heating systems with high-efficiency, emission-free air-source heat pumps in low-income households. According to disclosed data from the organization, the carbon abatement cost of this initiative amounts to $\$46$ per metric ton of carbon dioxide equivalent $(CO_2e)$ reduced. This metric has been utilized for input-output calculations in the field of carbon emission reduction.
+  \item \textbf{Input-output in infrastructure construction:} Based on previous analyses indicating that the substantial tourist influx during peak seasons exerts considerable pressure on Juneau's public transportation system, this study conducts a cost-benefit analysis of infrastructure investments from the perspective of public transportation input-output efficiency.\par
+  According to statistical data from the American Public Transportation Association (APTA), the average operational cost of public transit systems in the United States ranges between USD 3-5 per passenger trip. Assuming Juneau's operational costs approximate the national average, with fare revenue covering approximately 50\% of operational expenditures, our calculations demonstrate that each additional passenger served by the transit system would require an incremental investment of USD 2. This derived value results from the differential between total operational costs and fare recovery rates, calculated as: 
+  $$\$ 4 \times 50\% = \$ 2 \text{ per additional passenger}$$ 
+\end{itemize} 
+
+\subsection{Sustainable Mourism Mptimization Mevelopment Model}
 \subsubsection{Impact of Short-term Motivation and Confidence Boost on Serve Success Rate}
 \textbf{Short-term Motivation} refers to a brief period of above-average performance by a player
 following a motivating event (e.g., a breaking serve) during a match, a phenomenon known

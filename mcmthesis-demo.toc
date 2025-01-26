@@ -5,40 +5,41 @@
 \contentsline {section}{\numberline {3}List of Notation}{6}{section.3}%
 \contentsline {section}{\numberline {4}Data Pre-processing}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Data Collection}{6}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Task1: Tourism Sustainability Optimization Framework}{7}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Precondition description}{7}{subsection.5.1}%
-\contentsline {subsubsection}{\numberline {5.1.1}Relationship between Carbon Emissions and Tourist Numbers}{7}{subsubsection.5.1.1}%
-\contentsline {subsubsection}{\numberline {5.1.2}Tourism revenue regression model}{9}{subsubsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.3}Structural equation model of residents' satisfaction}{9}{subsubsection.5.1.3}%
-\contentsline {subsubsection}{\numberline {5.1.4}To be continue}{10}{subsubsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.2}Leverage Quantitative Momentum Capture Model}{11}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Impact of Short-term Motivation and Confidence Boost on Serve Success Rate}{11}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Monte Carlo Simulation for Winning Probability}{13}{subsubsection.5.2.2}%
-\contentsline {section}{\numberline {6}Model Overview}{14}{section.6}%
-\contentsline {section}{\numberline {7}Sub-model I : Adding Water Continuously}{15}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Model Establishment}{15}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Control Equations and Boundary Conditions}{15}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Definition of the Mean Temperature}{17}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Determination of Heat Transfer Capacity}{17}{subsubsection.7.1.3}%
-\contentsline {section}{\numberline {8}Sub-model II: Adding Water Discontinuously}{17}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Heating Model}{17}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Control Equations and Boundary Conditions}{17}{subsubsection.8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.2}Determination of Inflow Time and Amount}{17}{subsubsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.2}Standby Model}{17}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Results}{17}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Determination of Parameters}{17}{subsubsection.8.3.1}%
-\contentsline {subsubsection}{\numberline {8.3.2}Calculating Results}{18}{subsubsection.8.3.2}%
-\contentsline {section}{\numberline {9}Correction and Contrast of Sub-Models}{18}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Correction with Evaporation Heat Transfer}{18}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Contrast of Two Sub-Models}{18}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Model Analysis and Sensitivity Analysis}{18}{section.10}%
-\contentsline {subsection}{\numberline {10.1}The Influence of Different Bathtubs}{18}{subsection.10.1}%
-\contentsline {subsubsection}{\numberline {10.1.1}Different Volumes of Bathtubs}{19}{subsubsection.10.1.1}%
-\contentsline {section}{\numberline {11}Strength and Weakness}{19}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Strength}{19}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Weakness}{20}{subsection.11.2}%
-\contentsline {section}{\numberline {12}Further Discussion}{20}{section.12}%
-\contentsline {section}{Reference}{21}{section*.14}%
-\contentsline {section}{Appendices}{23}{section*.15}%
-\contentsline {section}{Appendix \numberline {A}First appendix}{23}{appendix.a.A}%
-\contentsline {section}{Appendix \numberline {B}Second appendix}{23}{appendix.a.B}%
+\contentsline {section}{\numberline {5}Task1: Tourism Sustainability Optimization Framework}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Precondition description}{9}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Relationship between Carbon Emissions and Tourist Numbers}{9}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Tourism revenue regression model}{10}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Structural equation model of residents' satisfaction}{11}{subsubsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.4}Infrastructure Stress Analysis}{12}{subsubsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.5}Input-output of additional expenditure by sector}{13}{subsubsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.2}Sustainable Mourism Mptimization Mevelopment Model}{13}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Impact of Short-term Motivation and Confidence Boost on Serve Success Rate}{13}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Monte Carlo Simulation for Winning Probability}{15}{subsubsection.5.2.2}%
+\contentsline {section}{\numberline {6}Model Overview}{16}{section.6}%
+\contentsline {section}{\numberline {7}Sub-model I : Adding Water Continuously}{17}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Model Establishment}{17}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Control Equations and Boundary Conditions}{17}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Definition of the Mean Temperature}{19}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Determination of Heat Transfer Capacity}{19}{subsubsection.7.1.3}%
+\contentsline {section}{\numberline {8}Sub-model II: Adding Water Discontinuously}{19}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Heating Model}{19}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Control Equations and Boundary Conditions}{19}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Determination of Inflow Time and Amount}{19}{subsubsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.2}Standby Model}{19}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Results}{19}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Determination of Parameters}{19}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Calculating Results}{20}{subsubsection.8.3.2}%
+\contentsline {section}{\numberline {9}Correction and Contrast of Sub-Models}{20}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Correction with Evaporation Heat Transfer}{20}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Contrast of Two Sub-Models}{20}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Model Analysis and Sensitivity Analysis}{20}{section.10}%
+\contentsline {subsection}{\numberline {10.1}The Influence of Different Bathtubs}{20}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}Different Volumes of Bathtubs}{21}{subsubsection.10.1.1}%
+\contentsline {section}{\numberline {11}Strength and Weakness}{21}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Strength}{21}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Weakness}{22}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Further Discussion}{22}{section.12}%
+\contentsline {section}{Reference}{23}{section*.16}%
+\contentsline {section}{Appendices}{25}{section*.17}%
+\contentsline {section}{Appendix \numberline {A}First appendix}{25}{appendix.a.A}%
+\contentsline {section}{Appendix \numberline {B}Second appendix}{25}{appendix.a.B}%

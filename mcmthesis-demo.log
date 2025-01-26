@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.20)  26 JAN 2025 13:03
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.20)  26 JAN 2025 18:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1176,52 +1176,53 @@ Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 128.
+(Font)              scaled to size 12.0pt on input line 132.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 128.
+(Font)              scaled to size 24.88pt on input line 132.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 128.
+(Font)              scaled to size 20.74pt on input line 132.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 128.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 128.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 128.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 128.
- (g:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 128.
- (g:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 128.
- (g:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 128.
- (g:/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [1
+(Font)              scaled to size 14.4pt on input line 132.
+ [1
 
 ]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 132.
+(Font)              scaled to size 17.28pt on input line 136.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 132.
- (./mcmthesis-demo.toc [2])
+(Font)              scaled to size 17.28pt on input line 136.
+ (./mcmthesis-demo.toc
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 1.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
+ (g:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
+ (g:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
+ (g:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 1.
+ (g:/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+) [2])
 \tf@toc=\write6
 \openout6 = `mcmthesis-demo.toc'.
 
  [3]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 139.
+(Font)              scaled to size 14.4pt on input line 143.
 File: ./figures/totaltour_1.pdf Graphic file (type pdf)
 <use ./figures/totaltour_1.pdf>
 File: ./figures/Work_review02.pdf Graphic file (type pdf)
 <use ./figures/Work_review02.pdf>
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 181.
+(Font)              scaled to size 10.95pt on input line 185.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1271,9 +1272,7 @@ File: ./figures/Satisfaction Questionnaire.pdf Graphic file (type pdf)
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (0.72412pt too wide) in paragraph at lines 331--332
-[]\TU/TeXGyreTermesX(0)/b/n/12 Quadratic term of tourist numbers: \TU/TeXGyreTermesX(0)/m/n/12 Reflects the nonlinear relationship between tourism
- []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1283,12 +1282,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [7]
-File: ./figures/tournum-carbon.pdf Graphic file (type pdf)
-<use ./figures/tournum-carbon.pdf>
+File: ./figures/dailyvisitor.pdf Graphic file (type pdf)
+<use ./figures/dailyvisitor.pdf>
 
-Overfull \hbox (2.27618pt too wide) in paragraph at lines 342--343
- [][] 
- []
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1298,9 +1296,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8]
-Overfull \hbox (1.39407pt too wide) in paragraph at lines 380--381
-[]\TU/TeXGyreTermesX(0)/b/n/12 Glacier (glacial status): \TU/TeXGyreTermesX(0)/m/n/12 Evaluated through $\OML/cmm/m/it/12 Glacier[]$ \TU/TeXGyreTermesX(0)/m/n/12 (residents’ concern about tourism-
+Overfull \hbox (0.72412pt too wide) in paragraph at lines 387--388
+[]\TU/TeXGyreTermesX(0)/b/n/12 Quadratic term of tourist numbers: \TU/TeXGyreTermesX(0)/m/n/12 Reflects the nonlinear relationship between tourism
  []
+
+File: ./figures/tournum-carbon.pdf Graphic file (type pdf)
+<use ./figures/tournum-carbon.pdf>
+
+Overfull \hbox (2.27618pt too wide) in paragraph at lines 398--399
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1310,15 +1318,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[10]
+Overfull \hbox (1.39407pt too wide) in paragraph at lines 436--437
+[]\TU/TeXGyreTermesX(0)/b/n/12 Glacier (glacial status): \TU/TeXGyreTermesX(0)/m/n/12 Evaluated through $\OML/cmm/m/it/12 Glacier[]$ \TU/TeXGyreTermesX(0)/m/n/12 (residents’ concern about tourism-
+ []
+
 File: sem_diagram_final.pdf Graphic file (type pdf)
 <use sem_diagram_final.pdf>
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (1.95616pt too wide) in paragraph at lines 414--416
-\TU/TeXGyreTermesX(0)/m/n/12 The relationship between the above concepts, i.e., the framework of the model, is shown schemat-
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[11]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
+Overfull \hbox (6.53212pt too wide) in paragraph at lines 462--463
+[]\TU/TeXGyreTermesX(0)/m/n/12 According to statistical data from the American Public Transportation Association (APTA),
  []
 
 
@@ -1328,39 +1362,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[10]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[11]
+[13]
 File: ./figures/continue_winning.pdf Graphic file (type pdf)
 <use ./figures/continue_winning.pdf>
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[12]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[13]
-File: ./figures/fig1.jpg Graphic file (type bmp)
-<./figures/fig1.jpg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1378,11 +1382,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
-File: ./figures/fig2.jpg Graphic file (type bmp)
-<./figures/fig2.jpg>
+File: ./figures/fig1.jpg Graphic file (type bmp)
+<./figures/fig1.jpg>
 
 
-LaTeX Warning: Citation '5' on page 16 undefined on input line 578.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1400,6 +1404,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
+File: ./figures/fig2.jpg Graphic file (type bmp)
+<./figures/fig2.jpg>
+
+
+LaTeX Warning: Citation '5' on page 18 undefined on input line 628.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1416,6 +1426,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[21]
 File: ./figures/fig24.jpg Graphic file (type bmp)
 <./figures/fig24.jpg>
 
@@ -1426,8 +1452,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 807--808
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 857--858
 [][]$[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][][] [] [][][][][][] [] [][][] []
  []
 
@@ -1438,7 +1464,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[21]
+[23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1446,22 +1472,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22]
+[24]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 841.
+(Font)              scaled to size 24.88pt on input line 891.
 
-Underfull \hbox (badness 10000) in paragraph at lines 847--848
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
 
  []
 
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 850.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 900.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 850.
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 850.
-LaTeX Font Info:    No file TUpcr.fd. on input line 850.
+(Font)              scaled to size 10.0pt on input line 900.
+LaTeX Font Info:    Trying to load font information for TU+pcr on input line 900.
+LaTeX Font Info:    No file TUpcr.fd. on input line 900.
 
 LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 850.
+(Font)              using `TU/lmr/m/n' instead on input line 900.
 
 (./code/mcmthesis-matlab1.m
 
@@ -1485,7 +1511,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[23])
+[25])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1493,9 +1519,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[24]
+[26]
 \c@lastpage=\count491
- [25] 
+ [27] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./mcmthesis-demo.aux)
  ***********
@@ -1512,8 +1538,14 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `mcmthesis-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 8357FB583ABB23269A51F3AAB7E57FAD;9081.
+
+Package rerunfilecheck Warning: File `mcmthesis-demo.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `mcmthesis-demo.out':
+(rerunfilecheck)             Before: FD23928F97C837903902C898AFC50028;9484
+(rerunfilecheck)             After:  1CF0D8669458EC47458F815F14454E8C;9514.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                mcmthesis-demo
@@ -1524,12 +1556,12 @@ Package logreq Info: Writing requests to 'mcmthesis-demo.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 29515 strings out of 476720
- 574535 string characters out of 5801444
- 1964842 words of memory out of 5000000
- 51085 multiletter control sequences out of 15000+600000
+ 29531 strings out of 476720
+ 574946 string characters out of 5801444
+ 1967842 words of memory out of 5000000
+ 51100 multiletter control sequences out of 15000+600000
  576221 words of font info for 116 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  87i,18n,117p,1879b,2099s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mcmthesis-demo.pdf (25 pages).
+Output written on mcmthesis-demo.pdf (27 pages).

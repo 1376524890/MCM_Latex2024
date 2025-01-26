@@ -96,10 +96,9 @@ The \textbf{threshold for resident satisfaction}.
 Resident satisfaction is derived from a weighted analysis of dissatisfaction data in the 
 survey report, with a \textbf{$15\%$ dissatisfaction threshold} set (based on the actual 
 dissatisfaction rate of $16\%$ in 2023). Furthermore, this study has established additional 
-expenditure plans covering three areas:
+expenditure plans covering \textbf{Community projects} by these areas:
 \textbf{Environmental protection},
-\textbf{Infrastructure development}, 
-\textbf{Community projects}. 
+\textbf{Infrastructure development}. \\
 For task 2, we classifies different types of tourist destinations through \textbf{cluster analysis}, 
 focusing on the differential characteristics of \textbf{core indicators} such as tourist numbers, 
 infrastructure carrying capacity, and tourism revenue. Based on the classification results, 
@@ -176,7 +175,7 @@ diverse contexts.
   \item \textbf{Task 1:  Tourism Sustainability Optimization Framework} This task establishes a comprehensive analytical system combining multivariate regression, input-output analysis, and multi-objective optimization to quantify tourism-environment interactions and optimize investment strategies. Based on literature research and existing survey data, we construct a multiple regression model to examine the relationships between carbon emissions, economic benefits of tourism, glacier melting rates, resident satisfaction, and tourist numbers. Building on this basis, an input-output analysis will be used to assess the investment effectiveness in three areas: environmental protection (carbon reduction), infrastructure development, and community programs. Subsequently, a multi-objective optimization model will be developed using the NSGA-III algorithm. This model will integrate the objective functions and constraints, aiming to determine the optimal tourist carrying capacity and investment allocation plan, followed by a sensitivity analysis of key parameters.
   \begin{figure}[h!] 
     \centering
-    \includegraphics[width=12cm]{Work_review.pdf}
+    \includegraphics[width=12cm]{Work_review02.pdf}
     \caption{Tourism Sustainability Optimization Framework} \label{fig2}
   \end{figure}
   \item \textbf{Task 2: Data-driven adaptability Summary.} This task develops a dynamic clustering methodology to implement differentiated management strategies for diverse tourism destinations. A clustering analysis will be conducted to classify different types of tourist destinations, with a focus on examining the differential characteristics of core indicators such as tourist numbers, infrastructure carrying capacity, and tourism revenue. Based on the classification results, the constraint parameters of the optimization model will be dynamically adjusted to ensure the model's adaptability and flexibility in addressing overtourism impacts at different types of destinations.
@@ -326,15 +325,38 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
   
 \section{Task1: Tourism Sustainability Optimization Framework}
 \subsection{Precondition description}
-\subsubsection{Greenhouse gas emissions regression model}
-We applied regression analysis to examine the quantitative relationship between tourist volume and greenhouse gas emissions. The linear regression model constructed using the least squares method is:
-\begin{equation}
-  C_i = \alpha_0 + \alpha_1 V_i + \epsilon 
-\end{equation}
-\textbf{Through regression analysis, the following empirical results were obtained:}
+\subsubsection{Relationship between Carbon Emissions and Tourist Numbers}
+We selected greenhouse gas emission data from 2011 to 2019 as the dependent variable to examine the dynamic impacts of tourist numbers and temporal factors on emissions. The independent variables were chosen based on the following rationale:
 \begin{itemize}
-  \item \textbf{Regression Coefficient $(\beta_1= 0.043)$} indicates that for each additional tourist, greenhouse gas emissions increase by an average of 0.043 metric tons.
+  \item \textbf{Quadratic term of tourist numbers:} Reflects the nonlinear relationship between tourism activities and emissions, capturing changes in marginal effects.
+  \item \textbf{Year deviation term ($Year-2011$):} Quantifies cumulative effects of environmental policy implementation while eliminating baseline year selection bias.
+  \item \textbf{Data standardization:} Tourist numbers were converted to millions ($V_i^M$) to enhance model stability.
 \end{itemize}
+Based on this analysis, we established a quadratic regression model with temporal trend:
+\begin{equation}
+  C_i = \beta_0 + \beta_1 (\text{Year-2011}) + \beta_2 V_i^M + \beta_3 \left( V_i^M \right)^2 + \epsilon 
+\end{equation}
+\textbf{Through solving the equation, we derived results as shown in the Figure \ref{fig:carbon}}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=16cm]{tournum-carbon.pdf}
+  \caption{Relationship between Carbon Emissions and Tourist Numbers}  % 添加标题
+  \label{fig:carbon}                   % 标签放在caption之后
+\end{figure}
+\begin{itemize}
+  \item $\beta_0 = 1,151,001$ represents the baseline intercept for the reference year.
+  \item $\beta_1 = −6,723$ quantifies the annual emission reduction effect (unit: metric tons per year).
+  \item $\beta_2 = −1,198,962$ and $\beta_3 = 337,702$ jointly capture the nonlinear effects of tourism activities on carbon emissions.
+\end{itemize}
+\textbf{By deriving the first derivative of this function:}
+\begin{equation}
+  \frac{\partial C}{\partial V} = \beta_2 + 2\beta_3 V = 0 \quad \Rightarrow \quad V_c = -\frac{\beta_2}{2\beta_3}
+\end{equation}
+Substituting estimated parameters yields:
+\begin{equation}
+  V_c = \frac{1,198,962}{2 \times 337,702} \approx 1.77 \text{ million}
+\end{equation}
+This demonstrates that when Juneau's tourist numbers exceed 1.77 million visitors per year, subsequent growth in tourism will lead to a significant increase in local CO₂ emissions, causing environmental degradation through accelerated glacier melting and other ecological consequences.
 \subsubsection{Tourism revenue regression model}
 We employed regression analysis to investigate the quantitative relationship between tourist volume and tourism revenue. The linear regression model constructed based on the least squares method is as follows:
 \begin{equation}

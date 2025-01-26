@@ -211,7 +211,7 @@ make the following basic assumptions, each of which is properly justified.
   $V_i$      & Visitor Volume      \\
   $TA^\alpha$      & Tax Allocation in area $\alpha$     \\
   $TR_i$   & Tourism Revenue      \\
-  $S_i$      & Resident Satisfaction       \\
+  $DS_i$      & Resident Dissatisfaction       \\
   $G_i$        & Glacier Melt Volume      \\
   $C_i$        & Carbon Emissions      \\
   $S_i$  & Infrastructure Stress      
@@ -313,16 +313,19 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
   also received attention, reflecting concern about the environmental impact of 
   aviation.\par Overall, residents hope tourism can drive economic growth while prioritizing 
   environmental protection. Detailed survey results are shown in Figure \ref{fig:satisfy}.
-  \begin{figure}[h!] 
+  \begin{figure}[h] 
     \centering
     {\includegraphics[width=12cm]{Satisfaction Questionnaire.pdf}} % 减小宽度留出边框空间
     \caption{Result of Satisfaction Questionnaire} \label{fig:satisfy}
   \end{figure}
+  \item \textbf{Tax income}\par
+  We know from the local regulations of Juneau that the local government imposes 9\% Hotel/Motel Tax and 5\% Sales Tax on tourists, with a total tax rate of 14\%. From this, we can conclude that the relationship between local taxes and tourist consumption, that is, local economic income, is:
+  $$TA^\alpha = 0.14 \times TR_i$$
+  where $TA$ is the total tax income and $TR$ is the total tourism revenue.
   \item \textbf{Calculation of Daily Visitor Distribution}\par
   Based on the annual total of 1,638,902 cruise visitors in Juneau City Port in 2023 and the recorded days exceeding daily visitor thresholds (Table \ref{tab:thresholds}), we assume the daily visitor count
   \begin{table}[h!]
     \centering
-    \caption{Daily Visitor Thresholds and Exceedance Days in 2023}
     \label{tab:thresholds}
     \rowcolors{2}{gray!10}{white} % 斑马纹：偶数行浅灰填充，奇数行白色
     \begin{tabular}{cc}
@@ -347,7 +350,9 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
       19,000 & 1  \\
       \bottomrule
     \end{tabular}
+    \caption{Daily Visitor Thresholds and Exceedance Days in 2023}
   \end{table}
+
   $V^{daily}$ follows a normal distribution $\mathcal{N}(\mu, \sigma^2)$. The probability distribution fitting proceeds as follows:
   $$\mu = \frac{1{,}638{,}902}{365} \approx 4{,}490.1 \, \text{visitors/day}$$
   The daily average visitor count is derived from the annual total.\\
@@ -363,12 +368,7 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
     \label{eq:dailyvisitor}
     \mathcal{N}(\mu, (4589.3)^2)
   \end{equation}
-  \begin{figure}[h!] 
-    \centering
-    {\includegraphics[width=15cm]{dailyvisitor.pdf}} % 减小宽度留出边框空间
-    \caption{Daily Visitor Distribution} 
-    \label{fig:dailyvisitor}
-  \end{figure}
+  
   
 \end{itemize}
 % \item 
@@ -450,7 +450,7 @@ The integrated findings reveal a U-shaped correlation between tourist volume and
 \end{figure}
 All in all,we get the following conclusions:
 \begin{equation}
-  1 - S_i = 76.62 - 0.574 V_i^M + 0.0129 \left( V_i^M \right)^2
+  DS_i = 76.62 - 0.574 V_i^M + 0.0129 \left( V_i^M \right)^2
 \end{equation}
 \subsubsection{Infrastructure Stress Analysis}
 As the majority of tourists visiting Juneau City opt for maritime transportation, the substantial influx of visitors imposes significant strain on the port facilities and adjacent public transportation infrastructure. Based on the 2023 survey report, our analysis indicates that the maximum daily capacity of the port’s traffic system is approximately 14,000 individuals per day. Exceeding this threshold would result in substantial tourist overcrowding. Consequently, we define the transportation infrastructure capacity limit of Juneau City as the condition under which tourist volume remains below this maximum capacity for no more than 97.5\% of days annually. The daily tourist volume is approximated to follow a normal distribution throughout the year as \eqref{eq:dailyvisitor}.\par  
@@ -459,11 +459,15 @@ We collected relevant information to determine the input-output of additional sp
 \begin{itemize}
   \item \textbf{Input-output in the field of carbon emission reduction:} We have examined an environmental justice initiative entitled the Alaska Carbon Reduction Fund, implemented by Renewable Juneau, a non-profit organization based in Juneau. This project allocates funds to replace oil-fired heating systems with high-efficiency, emission-free air-source heat pumps in low-income households. According to disclosed data from the organization, the carbon abatement cost of this initiative amounts to $\$46$ per metric ton of carbon dioxide equivalent $(CO_2e)$ reduced. This metric has been utilized for input-output calculations in the field of carbon emission reduction.
   \item \textbf{Input-output in infrastructure construction:} Based on previous analyses indicating that the substantial tourist influx during peak seasons exerts considerable pressure on Juneau's public transportation system, this study conducts a cost-benefit analysis of infrastructure investments from the perspective of public transportation input-output efficiency.\par
-  According to statistical data from the American Public Transportation Association (APTA), the average operational cost of public transit systems in the United States ranges between USD 3-5 per passenger trip. Assuming Juneau's operational costs approximate the national average, with fare revenue covering approximately 50\% of operational expenditures, our calculations demonstrate that each additional passenger served by the transit system would require an incremental investment of USD 2. This derived value results from the differential between total operational costs and fare recovery rates, calculated as: 
-  $$\$ 4 \times 50\% = \$ 2 \text{ per additional passenger}$$ 
+  According to statistical data from the American Public Transportation Association (APTA), the average operational cost of public transit systems in the United States ranges between USD 3-5 per passenger trip. Assuming Juneau's operational costs approximate the national average, with fare revenue covering approximately 50\% of operational expenditures, our calculations demonstrate that each additional passenger served by the transit system would require an incremental investment of USD 200. This derived value results from the differential between total operational costs and fare recovery rates.
 \end{itemize} 
 
 \subsection{Sustainable Mourism Mptimization Mevelopment Model}
+\begin{figure}
+  \centering
+  \includegraphics[width=16cm]{NSGA_3_final.pdf}
+  \caption{NSGA-III Algorithm Flowchart} \label{fig:nsga}
+\end{figure}
 \subsubsection{Impact of Short-term Motivation and Confidence Boost on Serve Success Rate}
 \textbf{Short-term Motivation} refers to a brief period of above-average performance by a player
 following a motivating event (e.g., a breaking serve) during a match, a phenomenon known

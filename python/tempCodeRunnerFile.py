@@ -1,1 +1,1 @@
-points_won
+g3 = DS_i - 15

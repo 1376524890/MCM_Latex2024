@@ -69,7 +69,15 @@
 \usepackage{tocloft}
 \usepackage{hyperref}
 \usepackage{xcolor}
-
+\usepackage{booktabs} % For cleaner table lines
+\usepackage{array}    % For column formatting
+\usepackage{caption}
+\usepackage{booktabs}   % 三线表支持
+\usepackage{siunitx}    % 数值对齐和格式化
+\usepackage{caption} 
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{graphicx}
 \setlength{\cftbeforesecskip}{6pt}
 \renewcommand{\contentsname}{\hspace*{\fill}\Large\bfseries Contents \hspace*{\fill}}
 
@@ -216,7 +224,7 @@ make the following basic assumptions, each of which is properly justified.
   $C_i$        & Carbon Emissions      \\
   $S_i$  & Infrastructure Stress      
   \end{tblr}
-  \caption*{Noted: Footmark $i$ means in year $i$} 
+  \caption{List of Notation} 
 \end{table}
 
 \section{Data Pre-processing}
@@ -462,13 +470,120 @@ We collected relevant information to determine the input-output of additional sp
   According to statistical data from the American Public Transportation Association (APTA), the average operational cost of public transit systems in the United States ranges between USD 3-5 per passenger trip. Assuming Juneau's operational costs approximate the national average, with fare revenue covering approximately 50\% of operational expenditures, our calculations demonstrate that each additional passenger served by the transit system would require an incremental investment of USD 200. This derived value results from the differential between total operational costs and fare recovery rates.
 \end{itemize} 
 
-\subsection{Sustainable Mourism Mptimization Mevelopment Model}
+\subsection{Model construction and algorithm implementation}
+\subsubsection{Multi-objective optimization model construction}
+\textbf{Define the 2-dimensional decision variable \( \mathbf{x} = [V_i, TA_{\alpha}] \), where:}
+\begin{itemize}
+    \item \( V_i \): Annual tourist volume (people/year), range \([0, 4.299 \times 10^6]\)
+    \item \( TA_{\alpha} \): Environmental tax allocation ratio (\%), range \([0, 100\%]\)
+\end{itemize}
+
+\textbf{Define the objective functions:}
+\[
+\max \, f_1 = -TR_i = \beta_0 - \beta_1 V_i
+\]
+\[
+\min \, f_2 = C_i = \beta_2 - \beta_3 - \beta_4 V_i + \beta_5 V_i^2 - \frac{TR_i \cdot \beta_6 TA_{\alpha}}{\beta_7}
+\]
+
+\textbf{Subject to constraints:}
+\[
+\begin{cases} 
+    g_1 = V_i - \beta_0^1 \leq 0, \\ 
+    g_2 = \dfrac{V_i^{\text{cruise}}}{\beta_0^2} + \beta_{1}^2 - S_i \leq 0, \\
+    g_3 = \big( \beta_{0}^3 - \beta_{1}^3 V_i + \beta_{2}^3 V_i^2 \big) - \beta_{3}^3 \leq 0,
+\end{cases}
+\]
+\subsubsection{Algorithm selection and parameter setting}
+We used the \textbf{NSGA-III algorithm} to solve the optimization problem. The algorithm uses a non-dominated sorting genetic algorithm based on reference points. By systematically generating reference directions, it guides the population to evenly distribute in the target space, avoids the solution set from gathering in local areas, and maintains the diversity and convergence of 
+the solution set. 
+%Key parameter configurations are shown in Table \ref{tab:params}.
+  % For table caption styling
+% \begin{table}[!ht]
+% \centering
+% \caption{Key Parameter Configuration}
+% \label{tab:params}
+
+% \begin{tabular}{@{}lll@{}}
+% \toprule
+% \textbf{Parameter} & \textbf{Value/Method} & \textbf{Theoretical Basis} \\
+% \midrule
+% Reference Direction Generation Strategy & Das-Dennis Method & Ensure uniform coverage \\
+% Number of Reference Directions & 12 & Balance computational efficiency \\
+% Population Size & 100 & avoiding premature convergence \\
+% Termination Condition & 300 generations & curve indicating steady state \\
+% \bottomrule
+% \end{tabular}
+% \label{tab:params}
+% \end{table}
+\subsection{Optimization results analysis}
+\begin{table}[htbp]
+  \centering
+  \caption{All Feasible Solutions with Environmental and Economic Indicators}
+  \label{tab:solutions}
+  \sisetup{
+    group-separator = {,},  % 千位分隔符
+    table-number-alignment = center,
+  }
+  \begin{tabular}{
+    l  % 新增序号列（左对齐）
+    S[table-format=7.0]  % 游客量
+    S[table-format=2.2]  % 税收占比
+    S[table-format=3.2]  % 经济收益
+    S[table-format=6.2]  % 碳排放
+  }
+  \toprule
+  {\textbf{No.}} &  % 新增序号列标题
+  {\textbf{Visitor Volume}} & 
+  {\textbf{$TA^{environment}$ (\%)}} & 
+  {\textbf{Total Revenue (million)}} & 
+  {\textbf{Carbon Emissions}} \\
+  \midrule
+  1  & 2256779 & 50.78 & 121.39 &  52261.30 \\  % 添加序号
+  2  & 2530518 & 61.40 & 158.78 & 155696.77 \\
+  3  & 2612080 & 56.06 & 169.92 & 200233.36 \\
+  4  & 2392205 & 70.76 & 139.89 &  91139.11 \\
+  5  & 2556476 & 59.44 & 162.32 & 169469.73 \\
+  6  & 2359848 & 71.67 & 135.47 &  78586.32 \\
+  7  & 2640759 & 54.34 & 173.83 & 216959.49 \\
+  8  & 2449582 & 66.88 & 147.72 & 116217.75 \\
+  9  & 2328394 & 76.06 & 131.17 &  65681.00 \\
+  10 & 2477035 & 64.55 & 151.47 & 129288.21 \\
+  11 & 2503671 & 63.05 & 155.11 & 142148.55 \\  % 原数据中此行游客量应为2503671（原文误为2593671）
+  12 & 2584167 & 57.35 & 166.10 & 184714.19 \\
+  13 & 2421627 & 68.89 & 143.91 & 103644.60 \\
+  \bottomrule
+  \end{tabular}
+\end{table}
 \begin{figure}
   \centering
   \includegraphics[width=16cm]{NSGA_3_final.pdf}
   \caption{NSGA-III Algorithm Flowchart} \label{fig:nsga}
 \end{figure}
-\subsubsection{Impact of Short-term Motivation and Confidence Boost on Serve Success Rate}
+Through a comprehensive analysis of 13 sets of feasible solutions (Table \ref{tab:solutions}), significant trade-offs emerge among the indicators of tourist volume, environmental protection expenditure ratio, economic returns, and greenhouse gas emissions across different schemes. From the perspective of economic return maximization, Scheme 7 (2,640,800 annual visitors) achieves the highest economic returns of 173.83 million dollar, but simultaneously exhibits the largest environmental cost with greenhouse gas emissions reaching 216,959.49 tonnes. Scheme 9 (2,328,400 annual visitors) demonstrates optimal sustainability characteristics, featuring the lowest greenhouse gas emissions (65,681.00 tonnes) and the highest environmental protection expenditure ratio (76.06\%), albeit with notably inferior economic returns of 131.17 million dollar.
+
+Notably, Scheme 4 (2,392,200 annual visitors) achieves superior comprehensive benefits: maintaining relatively high economic returns (139.89 million dollar) and environmental protection expenditure ratio (70.76\%) while reducing greenhouse gas emissions (91,139.11 tonnes) to approximately 30\% below the average level. Calculated by carbon emission intensity per unit economic return, this scheme achieves 651.7 tonnes/million dollar, significantly outperforming Scheme 7's 1,248.1 tonnes/million dollar, indicating higher resource utilization efficiency. Additionally, Scheme 6 (2,359,800 annual visitors) demonstrates effective balance between emission control (78,586.32 tonnes) and economic returns (135.47 million dollar), with its environmental protection expenditure ratio reaching 71.67\%, demonstrating sustainable development potential.
+
+In conclusion, Scheme 7 could serve as a short-term strategy prioritizing economic growth. For sustainable development objectives, Schemes 9 and 6 present higher implementation value. For decision-makers pursuing comprehensive benefit maximization, Scheme 4 achieves Pareto improvement by balancing environmental, economic, and fiscal objectives, making it the preferred option.
+
+Considering that Juneau's glacier tourism constitutes a nature-based destination where greenhouse gas emissions accelerate glacial retreat, we recommend adopting Scheme 6 or 9 as tourism development plans. These schemes prioritize environmental protection while maintaining economic balance, thereby achieving green development and sustainable growth.
+
+\begin{table}[htbp]
+\centering
+\caption{Parameter Comparison of Alternative Schemes}
+\label{tab:params}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Scheme & Annual Visitors (M) & $TA^{environment}$ (\%) & Total Revenue (million \$) & Emissions (10kt) \\
+\midrule
+6 & 2.3598 & 71.67 & 135.47 & 7.86 \\
+9 & 2.3284 & 76.06 & 131.17 & 6.57 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\subsection{Sensitivity analysis}
 \textbf{Short-term Motivation} refers to a brief period of above-average performance by a player
 following a motivating event (e.g., a breaking serve) during a match, a phenomenon known
 in sports as "hot hands". We developed a probabilistic model that quantifies Short-term

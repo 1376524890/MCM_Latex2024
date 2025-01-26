@@ -12,11 +12,11 @@ class TourismOptimizationProblem(Problem):
     def __init__(self):
         # 决策变量范围：[年游客量, 环保税收占比]
         xl = np.array([0, 0])
-        xu = np.array([16000*365, 1])
+        xu = np.array([4299037, 1])
         super().__init__(
             n_var=2, 
             n_obj=2, 
-            n_constr=3,  # 更新为4个约束
+            n_constr=4,  # 更新为4个约束
             xl=xl, 
             xu=xu,
             type_var=np.double
@@ -45,10 +45,10 @@ class TourismOptimizationProblem(Problem):
         g2 = (daily_mean + 2.33*4589.3) - S_i  # 交通容量约束
         DS_i = 76.62 - 57.4*V_i_million + 12.9*(V_i_million)**2
         g3 = DS_i - 15                     # 居民满意度约束
-        # g4 = 52257-C_i                           # 新增碳排放正约束 C_i > 0 → g4 <= 0
+        g4 = 52257-C_i                           # 新增碳排放正约束 C_i > 0 → g4 <= 0
 
         out["F"] = np.column_stack([f1, f2])
-        out["G"] = np.column_stack([g1, g2, g3])  # 包含四个约束
+        out["G"] = np.column_stack([g1, g2, g3, g4])  # 包含四个约束
 
 # ========== 算法配置 ==========
 ref_dirs = get_reference_directions("das-dennis", n_dim=2, n_partitions=12)
@@ -67,6 +67,20 @@ F_feasible = res.F[feasible_mask]
 # 转换目标值为实际意义
 economic_benefit = -F_feasible[:, 0] / 1e6  # 转换为百万单位（最大化）
 carbon_emission = F_feasible[:, 1]          # 直接取值（最小化）
+
+# ========== 新增：输出所有可行解 ==========
+if len(X_feasible) > 0:
+    print("\n所有可行解详细信息：")
+    print(f"{'游客量 (人/年)':<15} | {'税收占比 (%)':<12} | {'经济收益 (百万)':<15} | {'碳排放 (吨)':<12}")
+    print("-" * 65)
+    for i in range(len(X_feasible)):
+        visitors = X_feasible[i, 0]
+        tax_ratio = X_feasible[i, 1] * 100
+        econ = economic_benefit[i]
+        carbon = carbon_emission[i]
+        print(f"{visitors:<15.0f} | {tax_ratio:<12.2f} | {econ:<15.2f} | {carbon:<12.2f}")
+else:
+    print("\n警告：未找到满足所有约束的可行解！")
 
 # ========== 关键修复：确保在输出前定义best_solution ==========
 if len(X_feasible) > 0:
@@ -105,11 +119,11 @@ sorted_idx = np.argsort(economic_benefit)
 plt.plot(economic_benefit[sorted_idx], p(economic_benefit[sorted_idx]), 
          "--", color="gray", lw=1.5, alpha=0.7, label='Trend Line')
 
-# 标记最佳解
-if len(X_feasible) > 0:
-    plt.scatter(economic_benefit[best_idx], carbon_emission[best_idx],
-                s=400, marker="*", color='gold', edgecolor='k', 
-                linewidth=1, label='Optimal Compromise')
+# # 标记最佳解
+# if len(X_feasible) > 0:
+#     plt.scatter(economic_benefit[best_idx], carbon_emission[best_idx],
+#                 s=400, marker="*", color='gold', edgecolor='k', 
+#                 linewidth=1, label='Optimal Compromise')
 
 # 添加统计信息框
 stats_text = f"""

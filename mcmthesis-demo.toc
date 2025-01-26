@@ -12,34 +12,37 @@
 \contentsline {subsubsection}{\numberline {5.1.3}Structural equation model of residents' satisfaction}{10}{subsubsection.5.1.3}%
 \contentsline {subsubsection}{\numberline {5.1.4}Infrastructure Stress Analysis}{11}{subsubsection.5.1.4}%
 \contentsline {subsubsection}{\numberline {5.1.5}Input-output of additional expenditure by sector}{12}{subsubsection.5.1.5}%
-\contentsline {subsection}{\numberline {5.2}Sustainable Mourism Mptimization Mevelopment Model}{13}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Impact of Short-term Motivation and Confidence Boost on Serve Success Rate}{13}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Monte Carlo Simulation for Winning Probability}{15}{subsubsection.5.2.2}%
-\contentsline {section}{\numberline {6}Model Overview}{16}{section.6}%
-\contentsline {section}{\numberline {7}Sub-model I : Adding Water Continuously}{17}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Model Establishment}{17}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Control Equations and Boundary Conditions}{17}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Definition of the Mean Temperature}{19}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Determination of Heat Transfer Capacity}{19}{subsubsection.7.1.3}%
-\contentsline {section}{\numberline {8}Sub-model II: Adding Water Discontinuously}{19}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Heating Model}{19}{subsection.8.1}%
-\contentsline {subsubsection}{\numberline {8.1.1}Control Equations and Boundary Conditions}{19}{subsubsection.8.1.1}%
-\contentsline {subsubsection}{\numberline {8.1.2}Determination of Inflow Time and Amount}{19}{subsubsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.2}Standby Model}{19}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Results}{19}{subsection.8.3}%
-\contentsline {subsubsection}{\numberline {8.3.1}Determination of Parameters}{19}{subsubsection.8.3.1}%
-\contentsline {subsubsection}{\numberline {8.3.2}Calculating Results}{20}{subsubsection.8.3.2}%
-\contentsline {section}{\numberline {9}Correction and Contrast of Sub-Models}{20}{section.9}%
-\contentsline {subsection}{\numberline {9.1}Correction with Evaporation Heat Transfer}{20}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}Contrast of Two Sub-Models}{20}{subsection.9.2}%
-\contentsline {section}{\numberline {10}Model Analysis and Sensitivity Analysis}{20}{section.10}%
-\contentsline {subsection}{\numberline {10.1}The Influence of Different Bathtubs}{20}{subsection.10.1}%
-\contentsline {subsubsection}{\numberline {10.1.1}Different Volumes of Bathtubs}{21}{subsubsection.10.1.1}%
-\contentsline {section}{\numberline {11}Strength and Weakness}{21}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Strength}{21}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Weakness}{22}{subsection.11.2}%
-\contentsline {section}{\numberline {12}Further Discussion}{22}{section.12}%
-\contentsline {section}{Reference}{23}{section*.16}%
-\contentsline {section}{Appendices}{25}{section*.17}%
-\contentsline {section}{Appendix \numberline {A}First appendix}{25}{appendix.a.A}%
-\contentsline {section}{Appendix \numberline {B}Second appendix}{25}{appendix.a.B}%
+\contentsline {subsection}{\numberline {5.2}Model construction and algorithm implementation}{13}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Multi-objective optimization model construction}{13}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Algorithm selection and parameter setting}{13}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Optimization results analysis}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Sensitivity analysis}{15}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Monte Carlo Simulation for Winning Probability}{17}{subsubsection.5.4.1}%
+\contentsline {section}{\numberline {6}Model Overview}{18}{section.6}%
+\contentsline {section}{\numberline {7}Sub-model I : Adding Water Continuously}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Model Establishment}{19}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Control Equations and Boundary Conditions}{19}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Definition of the Mean Temperature}{21}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Determination of Heat Transfer Capacity}{21}{subsubsection.7.1.3}%
+\contentsline {section}{\numberline {8}Sub-model II: Adding Water Discontinuously}{21}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Heating Model}{21}{subsection.8.1}%
+\contentsline {subsubsection}{\numberline {8.1.1}Control Equations and Boundary Conditions}{21}{subsubsection.8.1.1}%
+\contentsline {subsubsection}{\numberline {8.1.2}Determination of Inflow Time and Amount}{21}{subsubsection.8.1.2}%
+\contentsline {subsection}{\numberline {8.2}Standby Model}{21}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Results}{21}{subsection.8.3}%
+\contentsline {subsubsection}{\numberline {8.3.1}Determination of Parameters}{21}{subsubsection.8.3.1}%
+\contentsline {subsubsection}{\numberline {8.3.2}Calculating Results}{22}{subsubsection.8.3.2}%
+\contentsline {section}{\numberline {9}Correction and Contrast of Sub-Models}{22}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Correction with Evaporation Heat Transfer}{22}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Contrast of Two Sub-Models}{22}{subsection.9.2}%
+\contentsline {section}{\numberline {10}Model Analysis and Sensitivity Analysis}{22}{section.10}%
+\contentsline {subsection}{\numberline {10.1}The Influence of Different Bathtubs}{22}{subsection.10.1}%
+\contentsline {subsubsection}{\numberline {10.1.1}Different Volumes of Bathtubs}{23}{subsubsection.10.1.1}%
+\contentsline {section}{\numberline {11}Strength and Weakness}{23}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Strength}{23}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Weakness}{24}{subsection.11.2}%
+\contentsline {section}{\numberline {12}Further Discussion}{24}{section.12}%
+\contentsline {section}{Reference}{25}{section*.18}%
+\contentsline {section}{Appendices}{27}{section*.19}%
+\contentsline {section}{Appendix \numberline {A}First appendix}{27}{appendix.a.A}%
+\contentsline {section}{Appendix \numberline {B}Second appendix}{27}{appendix.a.B}%

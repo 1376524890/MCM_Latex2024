@@ -29,4 +29,3 @@
 \contentsline {section}{\numberline {8}Strength and Weakness}{22}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Strength}{22}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Weakness}{22}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Further Discussion}{23}{section.9}%

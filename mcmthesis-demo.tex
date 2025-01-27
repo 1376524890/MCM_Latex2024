@@ -1,61 +1,3 @@
-%%
-%% This is file `mcmthesis-demo.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% mcmthesis.dtx  (with options: `demo')
-%%
-%% -----------------------------------
-%%
-%% This is a generated file.
-%%
-%% Copyright (C)
-%%       2010 -- 2015 by Zhaoli Wang
-%%       2014 -- 2019 by Liam Huang
-%%       2019 -- present by latexstudio.net
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%%
-%% This work has the LPPL maintenance status `maintained'.
-%%
-%% The Current Maintainer of this work is Liam Huang.
-%%
-%%
-%% This is file `mcmthesis-demo.tex',
-%% generated with the docstrip utility.
-%%
-%% The original source files were:
-%%
-%% mcmthesis.dtx  (with options: `demo')
-%%
-%% -----------------------------------
-%%
-%% This is a generated file.
-%%
-%% Copyright (C)
-%%       2010 -- 2015 by Zhaoli Wang
-%%       2014 -- 2019 by Liam Huang
-%%       2019 -- present by latexstudio.net
-%%
-%% This work may be distributed and/or modified under the
-%% conditions of the LaTeX Project Public License, either version 1.3
-%% of this license or (at your option) any later version.
-%% The latest version of this license is in
-%%   http://www.latex-project.org/lppl.txt
-%% and version 1.3 or later is part of all distributions of LaTeX
-%% version 2005/12/01 or later.
-%%
-%% This work has the LPPL maintenance status `maintained'.
-%%
-%% The Current Maintainer of this work is Liam Huang.
-%%
 \documentclass{mcmthesis}
 \mcmsetup{CTeX = false,    % 使用 CTeX 套装时，设置为 true
           tcn = {2518438}, problem = \textcolor{red}{B},
@@ -63,7 +5,7 @@
           titlepage = false, abstract = false}
 \usepackage{marginnote}        
 \usepackage{newtxtext}     % \usepackage{palatino}
-\usepackage[backend=bibtex]{biblatex}   % for RStudio Complie
+\usepackage[backend=bibtex, style=numeric]{biblatex}   % for RStudio Complie
 \usepackage{tabularray}
 \usepackage{caption} % for table caption
 \usepackage{tocloft}
@@ -83,9 +25,8 @@
 \setlength{\cftbeforesecskip}{6pt}
 \renewcommand{\contentsname}{\hspace*{\fill}\Large\bfseries Contents \hspace*{\fill}}
 
-\title{Managing Sustainable Tourism}
-% \author{\small \href{http://www.latexstudio.net/}
-%   {\includegraphics[width=7cm]{mcmthesis-logo}}}
+\title{Money but Carbon Away:\\ A sustainable tourism planning scheme}
+
 \date{\today}
 
 \begin{document}
@@ -137,8 +78,6 @@ sustainable development of similar tourist destinations.
 
 \maketitle
 
-%% Generate the Table of Contents, if it's needed.
-% \renewcommand{\contentsname}{\centering Contents}
 \tableofcontents        % 若不想要目录, 注释掉该句
 \thispagestyle{empty}
 
@@ -147,7 +86,6 @@ sustainable development of similar tourist destinations.
 \section{Introduction}
 
 \subsection{Background}
-
 As the capital of Alaska, Juneau has a permanent population of approximately $30,000$. In recent years, 
 tourism has become a key driver of its economic growth, contributing an annual revenue of approximately 
 $\$375$ million. However, the rapid growth of tourism, particularly during peak seasons in Juneau, has led to 
@@ -155,12 +93,6 @@ a daily influx of up to $20,000$ visitors.These phenomena pose significant chall
 social, economic, and environmental fabric. Specifically, issues such as the overburdening of urban 
 infrastructure, a decline in residents' quality of life, and environmental degradation have become 
 increasingly evident.\par
-% Among these challenges, Mendenhall Glacier—one of Juneau's iconic attractions—is facing the dual 
-% pressures of global warming and increased carbon emissions resulting from tourism activities, which 
-% are accelerating its rate of melting. These not only pose a threat to the long-term appeal of 
-% Juneau as a tourist destination, but also raise concerns among local residents about the 
-% sustainability of tourism.Besides, the ongoing retreat of the glacier could lead to a decline in 
-% tourist numbers, which in turn would undermine the stability of the local economy.\par
 In light of these issues, Juneau urgently requires the development and implementation of a 
 scientifically-based sustainable tourism strategy that balances economic benefits, tourist 
 experience, and environmental conservation. This case study not only highlights the typical 
@@ -200,8 +132,8 @@ make the following basic assumptions, each of which is properly justified.
 \begin{itemize}
   \item \textbf{We conceptualize glacial ablation as an environmental baseline parameter.} 
   Glacial ablation constitutes the principal constraint on regional tourism development as a long-term geomorphic process. 
-  $2010-2020$ observations demonstrate sustained annual retreat ($5.9 km^3$) \cite{1} with 
-  limited interannual variability. Our passage posits glacial mass balance systems 
+  $2010-2020$ observations demonstrate sustained annual retreat ($5.9 km^3$) with 
+  limited interannual variability\cite{abc}. Our passage posits glacial mass balance systems 
   function independently from tourism dynamics, quantifying their tourism impact 
   as an environmental baseline parameter.
   %\item \textbf{We assume a linear relationship between tourist numbers and tourism revenue.}
@@ -298,15 +230,6 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
   }
 \end{table}
   \item \textbf{Questionnaire survey on residents' satisfaction}\par
-  % From 2011 to 2019, Juneau experienced significant growth in greenhouse gas emissions, tourist 
-  % numbers, and tourism revenue. Greenhouse gas emissions peaked in 2012 at $113,587.49$ 
-  % tons of CO_2e, later fluctuating, and reached $104,822.60$ tons in 2019, reflecting 
-  % tourism's environmental impact. Tourist numbers steadily increased from $1,556,800$ 
-  % in 2011 to $2,213,000$ in 2019, which aligns with rising tourism revenue. Revenue 
-  % grew sharply from $\$27,713,469$ in 2012 to $\$103,225,389$ in 2019, emphasizing tourism’s 
-  % economic contribution. Overall, the rise in tourist numbers and revenue is closely 
-  % tied to fluctuations in greenhouse gas emissions, indicating the dual impact of 
-  % tourism on Juneau's economy and environment.\par
   We reviewed the tourism satisfaction survey data from the Juneau City Government 
   and plotted the corresponding charts. The results indicate that residents are 
   concerned about tourism-related issues.\par Most are dissatisfied with crowding and 
@@ -398,14 +321,7 @@ Combined with the city of Juneau's 200 navigable days per year for cruise ships,
   
   
 \end{itemize}
-% \item 
 
-
-
-
-% \usepackage{color}
-% \usepackage{tabularray}
-  
 \section{Task1: Tourism Sustainability Optimization Framework}
 \subsection{Precondition description}
 \subsubsection{Relationship between Carbon Emissions and Tourist Numbers}
@@ -428,8 +344,8 @@ Based on this analysis, we established a quadratic regression model with tempora
 \end{figure}
 \begin{itemize}
   \item $\beta_0 = 1,151,001$ represents the baseline intercept for the reference year.
-  \item $\beta_1 = −6,723$ quantifies the annual emission reduction effect (unit: metric tons per year).
-  \item $\beta_2 = −1,198,962$ and $\beta_3 = 337,702$ jointly capture the nonlinear effects of tourism activities on carbon emissions.
+  \item $\beta_1 = -6,723$ quantifies the annual emission reduction effect (unit: metric tons per year).
+  \item $\beta_2 = -1,198,962$ and $\beta_3 = 337,702$ jointly capture the nonlinear effects of tourism activities on carbon emissions.
 \end{itemize}
 \textbf{By deriving the first derivative of this function:}
 \begin{equation}
@@ -439,7 +355,7 @@ Substituting estimated parameters yields:
 \begin{equation}
   V_c = \frac{1,198,962}{2 \times 337,702} \approx 1.78 \text{ million}
 \end{equation}
-This demonstrates that when Juneau's tourist numbers exceed 1.78 million visitors per year, subsequent growth in tourism will lead to a significant increase in local CO₂ emissions, causing environmental degradation through accelerated glacier melting and other ecological consequences.
+This demonstrates that when Juneau's tourist numbers exceed 1.78 million visitors per year, subsequent growth in tourism will lead to a significant increase in local $CO_2$ emissions, causing environmental degradation through accelerated glacier melting and other ecological consequences.
 \subsubsection{Tourism revenue regression model}
 We employed regression analysis to investigate the quantitative relationship between tourist volume and tourism revenue. The linear regression model constructed based on the least squares method is as follows:
 \begin{equation}
@@ -768,64 +684,19 @@ Through the above system modeling and data analysis, we obtain a multi-dimension
 \subsection{Strength}
 
 \begin{itemize}
-\item We analyze the problem based on thermodynamic formulas and laws, so that the model we established is of great validity.
-
-\item Our model is fairly robust due to our careful corrections in consideration of real-life situations and detailed sensitivity analysis.
-
-\item Via Fluent software, we simulate the time field of different areas throughout the bathtub. The outcome is vivid for us to understand the changing process.
-
-\item We come up with various criteria to compare different situations, like water consumption and the time of adding hot water. Hence an overall comparison can be made according to these criteria.
-
-\item Besides common factors, we still consider other factors, such as evaporation and radiation heat transfer. The evaporation turns out to be the main reason of heat loss, which corresponds with other scientist’s experimental outcome.
+\item \textbf{Multi-objective optimization:} The model simultaneously optimizes economic benefit and carbon emissions, facilitating more comprehensive decision-making for achieving sustainable tourism development goals.
+\item \textbf{Realistic constraints:} The four constraints, utilizing diverse models, cover factors such as visitor volume, traffic load, resident satisfaction, and carbon emissions, ensuring that the optimization results are highly applicable to real-world scenarios.
+\item \textbf{Use of advanced algorithms:} The NSGA-III algorithm is employed, effectively identifying multiple Pareto optimal solutions and mitigating the one-sidedness that may arise from traditional single-objective optimization methods.
 \end{itemize}
 
 \subsection{Weakness}
 
 \begin{itemize}
-\item Having knowing the range of some parameters from others’ essays, we choose a value from them to apply in our model. Those values may not be reasonable in reality.
-
-\item Although we investigate a lot in the influence of personal motions, they are so complicated that need to be studied further.
-
-\item Limited to time, we do not conduct sensitivity analysis for the influence of personal surface area.
+\item \textbf{Simplified assumptions:} The model's assumptions may be overly simplified, failing to comprehensively consider the influence of various social, economic, and cultural factors on visitor volume and carbon emissions.
+\item \textbf{Overly conservative constraints:} Some constraints, such as traffic capacity and resident satisfaction, may be too stringent, limiting the flexibility of the model and restricting the breadth of the solution space.
+\item \textbf{Dependence on data accuracy:} The model's results are highly dependent on the accuracy and timeliness of input data. Any discrepancies in the data may affect the reliability of the optimization outcomes.
 \end{itemize}
 
-\section{Further Discussion}
-
-In this part, we will focus on different distribution of inflow faucets. Then we discuss about the real-life application of our model.
-
-\begin{itemize}
-\item Different Distribution of Inflow Faucets
-
-In our before discussion, we assume there being just one entrance of inflow.
-
-From the simulating outcome, we find the temperature of bath water is hardly even. So we come up with the idea of adding more entrances.
-
-The simulation turns out to be as follows
-
-\begin{figure}[h] 
-\centering
-\includegraphics[width=12cm]{fig24.jpg}
-\caption{The simulation results of different ways of arranging entrances} \label{fig24}
-\end{figure}
-
-From the above figure, the more the entrances are, the evener the temperature will be. Recalling on the before simulation outcome, when there is only one entrance for inflow, the temperature of corners is quietly lower than the middle area.
-
-In conclusion, if we design more entrances, it will be easier to realize the goal to keep temperature even throughout the bathtub.
-
-\item Model Application
-
-Our before discussion is based on ideal assumptions. In reality, we have to make some corrections and improvement.
-
-\begin{itemize}
-\item[1)] Adding hot water continually with the mass flow of 0.16 kg/s. This way can ensure even mean temperature throughout the bathtub and waste less water.
-
-\item[2)] The manufacturers can design an intelligent control system to monitor the temperature so that users can get more enjoyable bath experience.
-
-\item[3)] We recommend users to add bubble additives to slow down the water being cooler and help cleanse. The additives with lower thermal conductivity are optimal.
-
-\item[4)] The study method of our establishing model can be applied in other area relative to convection heat transfer, such as air conditioners.
-\end{itemize}
-\end{itemize}
 \newpage
 \newgeometry{left=0pt, right=0pt, top=0pt, bottom=0pt} % 临时去除页边距
 \thispagestyle{empty} % 隐藏页眉页脚
@@ -838,65 +709,74 @@ Our before discussion is based on ideal assumptions. In reality, we have to make
 
 \restoregeometry % 恢复原始页边距
 \begin{thebibliography}{99}
-  \bibitem[Davies et al., 2024]{Davies2024}
+  \bibitem[Davies et al., 2024]{1}
   Davies, B., McNabb, R., Bendle, J. et al. 
   Accelerating glacier volume loss on Juneau Icefield driven by hypsometry and melt-accelerating feedbacks. 
   \textit{Nature Communications} \textbf{15}, 5099 (2024). 
   \url{https://doi.org/10.1038/s41467-024-49269-y}
   
-  \bibitem[Wrangell Sentinel, 2023]{glacier_limit}
+  \bibitem[Wrangell Sentinel, 2023]{2}
   Wrangell Sentinel. 
   Tour operators will exceed visitor limit at Juneau's Mendenhall Glacier. 
   \emph{The oldest continuously published newspaper in Alaska}. 
   Retrieved from \url{https://www.wrangellsentinel.com/story/2023/07/19/news/tour-operators-will-exceed-visitor-limit-at-juneaus-mendenhall-glacier/12096.html}
   
-  \bibitem[USDA, 2022]{glacier_visitors_2022}
+  \bibitem[USDA, 2022]{3}
   United States Department of Agriculture. 
   Glacier visitor data: 443,000. 
   Retrieved from \url{https://www.govinfo.gov/content/pkg/GOVPUB-A13-PURL-gpo222163/pdf/GOVPUB-A13-PURL-gpo222163.pdf}
   
-  \bibitem[City of Juneau, 2023]{tourism_survey}
+  \bibitem[City of Juneau, 2023]{4}
   City of Juneau. 
   Juneau Tourism Survey Report (2021-2023). 
   Retrieved from \url{https://juneau.org/wp-content/uploads/2021/12/Juneau-Tourism-Survey-Report-REV-12_1_21-1.pdf}
   
-  \bibitem[JEDC, 2024]{economic_indicators}
+  \bibitem[JEDC, 2024]{5}
   Juneau Economic Development Council. 
   The Juneau \& Southeast Alaska Economic Indicators Reports (2012-2024). 
   Retrieved from \url{https://www.jedc.org/wp-content/uploads/2024/11/2024-JEDC-Juneau-SEAK-Economic-Indicators-and-Outlook-Report.pdf}
   
-  \bibitem[City of Juneau, 2024]{visitor_circulator}
+  \bibitem[City of Juneau, 2024]{6}
   City of Juneau. 
   Juneau Visitor Circulator Study Final Report. 
   Retrieved from \url{https://juneau.org/wp-content/uploads/2024/02/Juneau-Visitor-Circulator-Study-Final-Report-2024-1.pdf}
   
-  \bibitem[EPA, n.d.]{carbon_emission}
+  \bibitem[EPA, n.d.]{7}
   U.S. Environmental Protection Agency. 
   EPA Greenhouse Gas Reporting Program: Aggregated County Data. 
   Retrieved from \url{https://www.epa.gov/ghgreporting}
   
-  \bibitem[Anonymous, 2013]{tax_environment}
+  \bibitem[Anonymous, 2013]{8}
   The effect of government expenditure on the environment: An empirical investigation. 
   \emph{Ecological Economics}. 
   Retrieved from \url{https://doi.org/10.1016/j.ecolecon.2013.04.002}
   
-  \bibitem[City of Juneau, 2020]{hotel_tax}
+  \bibitem[City of Juneau, 2020]{9}
   City of Juneau. 
   Administrative Guidelines: Hotel/Motel Room Tax Procedure 700. 
   Retrieved from \url{https://juneau.org/index.php?gf-download=2020%2F01%2F700_Hotel-Motel_Tax_Procedures_2020.pdf}
   
-  \bibitem[NAHB, n.d.]{housing_cost}
+  \bibitem[NAHB, n.d.]{10}
   National Association of Home Builders. 
   Housing Economics: Residential Building Cost and Income Ratio. 
   Retrieved from \url{https://www.nahb.org/news-and-economics/housing-economics}
   
-  \bibitem[Alaska CRF, n.d.]{carbon_tax_effect}
+  \bibitem[Alaska CRF, n.d.]{11}
   Alaska Carbon Reduction Fund. 
   Tax implications for carbon emissions. 
   Retrieved from \url{https://akcarbonreduction.org/}
   \end{thebibliography}
 
-% \newpage
+% \begin{thebibliography}{99}
+%   \bibitem{abc} D.~E. KNUTH   The \TeX{}book  the American
+%   Mathematical Society and Addison-Wesley
+%   Publishing Company , 1984-1986.
+%   \bibitem{2}Lamport, Leslie,  \LaTeX{}: `` A Document Preparation System '',
+%   Addison-Wesley Publishing Company, 1986.
+%   \bibitem{3}\url{https://www.latexstudio.net/}
+%   \end{thebibliography}
+
+\newpage
 
 % \begin{appendices}
 
@@ -924,25 +804,65 @@ Our before discussion is based on ideal assumptions. In reality, we have to make
 \section*{Report on Use of AI}
 
 \begin{enumerate}
-\item OpenAI ChatGPT (Nov 5, 2023 version, ChatGPT-4,) 
+\item Open AI Chatgt4o 
 \begin{description}
-\item[Query1:] <insert the exact wording you input into the AI tool> 
-\item[Output:] <insert the complete output from the AI tool>
+\item[Query1:] What are some cities in the United States with a developed tourism industry? 
+\item[Output:] Here’s the translation of the provided text:
+Tourist cities in the United States are typically those with rich culture, historical landmarks, natural beauty, and modern facilities. Here are some famous tourist cities:
+New York City
+As the largest and most diverse city in the U.S., New York is home to countless iconic attractions, including the Statue of Liberty, Times Square, Central Park, museums (such as the Metropolitan Museum of Art and the Museum of Modern Art), and Broadway.
+\begin{itemize}
+  \item \textbf{Los Angeles}
+  Los Angeles is the birthplace of Hollywood, with popular tourist attractions such as the Hollywood Walk of Fame, Universal Studios, Griffith Observatory, and beautiful beaches (like Santa Monica and Venice Beach).
+  Las Vegas
+  Known for its world-class casinos, nightlife, luxury hotels, and entertainment shows, Las Vegas offers unparalleled nighttime excitement and top-tier performances.
+  \item \textbf{San Francisco}
+  San Francisco is famous for the Golden Gate Bridge, Fisherman’s Wharf, Alcatraz Island, and its hilly streets. The city offers many cultural activities and unique scenic spots.
+  \item \textbf{Washington, D.C.}
+  As the capital of the United States, Washington, D.C. has a rich historical heritage, including the Capitol Building, the White House, the Lincoln Memorial, and the Smithsonian Institution museums.
+  \item \textbf{Miami}
+  Known for its tropical climate, white sand beaches, Latin culture, and vibrant nightlife, Miami is also a popular vacation destination in the U.S.
+  \item \textbf{Chicago}
+  Chicago has a deep cultural background, with tourists visiting Millennium Park, the Art Institute of Chicago, Navy Pier, and its famous skyscrapers.
+  \item \textbf{Boston}
+  Boston is one of the most historically significant cities in the U.S., with many historical sites such as the Freedom Trail, the Boston Tea Party Ships and Museum.
+  These cities have become hotspots for tourism in the U.S. due to their unique culture, history, entertainment, and natural beauty. Do you have a preference for any of these cities, or would you like to learn more about a specific one?
+\end{itemize}
+
 \end{description}
-\item OpenAI Ernie (Nov 5, 2023 version, Ernie 4.0) 
+\item Open AI Chatgt4o 
 \begin{description}
-\item[Query1:] <insert the exact wording of any subsequent input into the AI tool> 
-\item[Output:] <insert the complete output from the second query>
+\item[Query1:] The area of Juneau, Alaska, USA is how much? 
+\item[Output:] Juneau is the capital of Alaska, USA. Its total area is 3,255.0 square miles (8,430.4 square kilometers), which includes 2,715.7 square miles (7,036.1 square kilometers) of land and 539.3 square miles (1,394.3 square kilometers) of water.
 \end{description}
-\item Github CoPilot (Feb 3, 2024 version) 
+\item Open AI Chatgt4o 
 \begin{description}
-\item[Query1:] <insert the exact wording you input into the AI tool> 
-\item[Output:] <insert the complete output from the AI tool>
+\item[Query1:] "I am now going to perform cluster analysis on some famous tourist cities in the United States. How many indicators do you think are needed?" 
+\item[Output:] You can choose a suitable combination of these indicators, focusing on those that best reflect the tourism characteristics of the cities. If you're doing a basic cluster analysis, I recommend using the following key indicators as a foundation:
+\begin{itemize}
+  \item \textbf{Population Size}
+  \item \textbf{Tourism Revenue}
+  \item \textbf{Number of Tourist Attractions}
+  \item \textbf{Annual Tourist Arrival Numbers}
+  \item \textbf{Transportation Accessibility} (such as the number of airports)
+  \item \textbf{Safety Index}
+\end{itemize}
+These indicators cover aspects such as city size, tourism appeal, and accommodation capacity, helping you classify and analyze cities from various perspectives. If you have time and data, you can also include more dimensions (such as price level and climate) to further refine the clustering results.
+What data are you planning to use for the analysis? Feel free to share some specific tourist cities and data, and I can help you design the cluster model more concretely.
 \end{description}
-\item Google Bard (Feb 2, 2024 version) 
+\item Open AI Chatgt4o 
 \begin{description}
-\item[Query1:] <insert the exact wording of your query> 
-\item[Output:] <insert the complete output from the AI tool>
+\item[Query1:] The Relationship Between Carbon Footprint and Carbon Emissions
+\item[Output:] The Relationship Between Carbon Footprint and Carbon Emissions
+Carbon Emissions refer to the direct release of carbon dioxide (CO2) and other greenhouse gases (GHGs) into the atmosphere, primarily from human activities such as burning fossil fuels, industrial processes, and deforestation. These emissions contribute directly to global warming and climate change.
+Carbon Footprint, on the other hand, is a broader measure. It refers to the total amount of CO2 and other GHG emissions that are directly and indirectly associated with a particular activity, product, individual, organization, or nation. This includes not only the carbon emissions from energy use (e.g., electricity, fuel consumption) but also emissions from the entire lifecycle of goods and services—such as transportation, manufacturing, and waste generation.
+Relationship:
+\begin{itemize}
+  \item Carbon emissions are a key component of a carbon footprint. The carbon footprint is essentially the sum of all carbon emissions from the production, consumption, and disposal processes related to a specific activity or entity.
+  \item	For example, if an individual drives a car, the direct carbon emissions from fuel combustion contribute to their carbon footprint. Additionally, the carbon footprint would include the emissions generated in the production of the car, the extraction of raw materials, and the disposal of the car at the end of its life.
+  \item	Thus, carbon emissions are a direct measurement of GHG output, while a carbon footprint encompasses the entire lifecycle of activities or products and includes both direct and indirect emissions.
+  \end{itemize}
+  In summary, carbon emissions contribute to the carbon footprint, but the carbon footprint includes a wider scope, capturing both direct and indirect emissions across the supply chain.
 \end{description}
 \end{enumerate}
 
@@ -951,15 +871,4 @@ Our before discussion is based on ideal assumptions. In reality, we have to make
 \setcounter{page}{\value{lastpage}}
 
 \end{document}
-%%
-%% This work consists of these files mcmthesis.dtx,
-%%                                   figures/ and
-%%                                   code/,
-%% and the derived files             mcmthesis.cls,
-%%                                   mcmthesis-demo.tex,
-%%                                   README,
-%%                                   LICENSE,
-%%                                   mcmthesis.pdf and
-%%                                   mcmthesis-demo.pdf.
-%%
-%% End of file `mcmthesis-demo.tex'.
+

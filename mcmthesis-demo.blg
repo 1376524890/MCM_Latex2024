@@ -18,13 +18,13 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: mcmthesis-demo-blx.bib
-Warning--I didn't find a database entry for "abc"
+Warning--I didn't find a database entry for "1"
 Biblatex version: 3.19
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 1 entry,
             6399 wiz_defined-function locations,
-            1203 strings with 8993 characters,
+            1202 strings with 8990 characters,
 and the built_in function-call counts, 1534 in all, are:
 = -- 73
 > -- 70

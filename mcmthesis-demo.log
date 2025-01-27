@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.20)  27 JAN 2025 21:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.20)  27 JAN 2025 21:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1158,7 +1158,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4 <./figures/work_review02.pdf>]
 
-LaTeX Warning: Citation 'abc' on page 5 undefined on input line 136.
+LaTeX Warning: Citation '1' on page 5 undefined on input line 136.
 
 > Step: init table outer spec.
 > Step: parse table options.
@@ -1576,7 +1576,7 @@ Here is how much of TeX's memory you used:
  36 hyphenation exceptions out of 8191
  90i,13n,117p,1879b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/bera/fvsr8a.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrb1200.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><g:/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on mcmthesis-demo.pdf (27 pages, 6893617 bytes).
+Output written on mcmthesis-demo.pdf (27 pages, 6893610 bytes).
 PDF statistics:
  1121 PDF objects out of 1200 (max. 8388607)
  522 compressed objects within 6 object streams

@@ -78,6 +78,8 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{geometry}
 \setlength{\cftbeforesecskip}{6pt}
 \renewcommand{\contentsname}{\hspace*{\fill}\Large\bfseries Contents \hspace*{\fill}}
 
@@ -110,15 +112,11 @@ dissatisfaction rate of recent years.
 Furthermore, this study has established additional 
 expenditure plans covering \textbf{Community projects} by these areas:
 \textbf{Environmental protection},
-\textbf{Infrastructure development}. \par
-For task 2, we classifies different types of tourist destinations through \textbf{cluster analysis}, 
-focusing on the differential characteristics of \textbf{core indicators} such as tourist numbers, 
-infrastructure carrying capacity, and tourism revenue. Based on the classification results, 
-the constraints and parameters of the model are \textbf{dynamically adjusted and optimized} to enhance its 
-universality and flexibility, ensuring its applicability to various types of destinations affected 
-by overtourism.\par
+\textbf{Infrastructure development}. 
+We solved the optimal sustainable development investment ratio through the optimization model: when the total number of tourists received in the year reaches \textbf{2.36 million} and \textbf{71.6\%} of the additional expenditure is allocated to environmental protection measures, the system model reaches the Pareto optimal state. The simulation results show that under this scenario, the total annual revenue of the tourism industry is \textbf{USD 135.47 million}, and the annual greenhouse gas emissions are controlled at \textbf{78,600 tons} (78.6 kt $CO_2e$).\par
+For Task 2, we selected 20 renowned U.S. tourist cities as representative samples and employed the k-means clustering method for analysis, with a particular focus on discerning disparities among different city types. Subsequently, based on the distinct characteristics of these cities, we selected corresponding feasible solutions from Task 1 to establish targeted mappings, thereby addressing the model's generalization issue across diverse urban contexts.\par
 
-For task 3, we prepared a \textbf{policy recommendation memorandum} building on the empirical findings to 
+For Task 3, we prepared a \textbf{policy recommendation memorandum} building on the empirical findings to 
 provide scientific decision-making support for the sustainable development of tourism in Juneau 
 City. The memorandum highlights \textbf{key conclusions} derived from the model's empirical analysis and 
 proposes \textbf{actionable policy recommendations}.\par
@@ -132,7 +130,7 @@ Juneau City but also provides a \textbf{replicable analytical framework} and met
 sustainable development of similar tourist destinations.
 
 \begin{keywords}
-  Sustainable Development, NSGA-III, Over-tourism, Multi-objective Optimization
+  Sustainable Development, NSGA-III, K-means, Multi-objective Optimization
 \end{keywords}
 
 \end{abstract}
@@ -184,13 +182,14 @@ diverse contexts.
   multi-objective optimization model. Our research tasks primarily consist of the following three 
   interrelated aspects:
 \begin{itemize}
-  \item \textbf{Task 1:  Tourism Sustainability Optimization Framework} This task establishes a comprehensive analytical system combining multivariate regression, input-output analysis, and multi-objective optimization to quantify tourism-environment interactions and optimize investment strategies. Based on literature research and existing survey data, we construct a multiple regression model to examine the relationships between carbon emissions, economic benefits of tourism, glacier melting rates, resident satisfaction, and tourist numbers. Building on this basis, an input-output analysis will be used to assess the investment effectiveness in three areas: environmental protection (carbon reduction), infrastructure development, and community programs. Subsequently, a multi-objective optimization model will be developed using the NSGA-III algorithm. This model will integrate the objective functions and constraints, aiming to determine the optimal tourist carrying capacity and investment allocation plan, followed by a sensitivity analysis of key parameters.
+  \item \textbf{Task 1:  Tourism Sustainability Optimization Framework} This task establishes a comprehensive analytical system combining multivariate regression, input-output analysis, and multi-objective optimization to quantify tourism-environment interactions and optimize investment strategies. Based on literature research and existing survey data, we construct a multiple regression model to examine the relationships between carbon emissions, economic benefits of tourism, resident satisfaction, and tourist numbers. Building on this basis, an input-output analysis will be used to assess the investment effectiveness in these areas: environmental protection (greenhouse gases reduction) and infrastructure development. Subsequently, a multi-objective optimization model will be developed using the NSGA-III algorithm. This model will integrate the objective functions and constraints, aiming to determine the optimal tourist carrying capacity and investment allocation plan, followed by a sensitivity analysis of key parameters.
   \begin{figure}[h!] 
     \centering
     \includegraphics[width=12cm]{Work_review02.pdf}
     \caption{Tourism Sustainability Optimization Framework} \label{fig2}
   \end{figure}
-  \item \textbf{Task 2: Data-driven adaptability Summary.} This task develops a dynamic clustering methodology to implement differentiated management strategies for diverse tourism destinations. A clustering analysis will be conducted to classify different types of tourist destinations, with a focus on examining the differential characteristics of core indicators such as tourist numbers, infrastructure carrying capacity, and tourism revenue. Based on the classification results, the constraint parameters of the optimization model will be dynamically adjusted to ensure the model's adaptability and flexibility in addressing overtourism impacts at different types of destinations.
+  \item \textbf{Task 2: Data-driven adaptability Summary.} This task develops a dynamic clustering methodology to implement differentiated management strategies for diverse tourism destinations. A clustering analysis will be conducted to classify different types of tourist destinations, with a focus on examining the differential characteristics of core indicators such as tourist numbers, infrastructure carrying capacity, and tourism revenue. 
+  Based on the classification results, a sustainable tourism development plan corresponding to the city's development status is selected from the feasible solutions, ensuring the model's adaptability and flexibility in addressing overtourism impacts at different types of destinations.
   \item \textbf{Task 3: Evidence-based memo writing.} This task translates quantitative findings into actionable governance tools for sustainable tourism management. Based on the empirical research findings, a policy recommendation memorandum will be drafted to provide scientific decision-making support for the sustainable development of Juneau's tourism industry. The memorandum will focus on the key conclusions derived from the model's empirical analysis and offer actionable policy recommendations.
   \end{itemize}
   There is a significant theoretical and practical connection between the tasks outlined above: The foundational model developed in Task 1 provides the methodological support for subsequent research; 
@@ -201,10 +200,11 @@ make the following basic assumptions, each of which is properly justified.
 \begin{itemize}
   \item \textbf{We conceptualize glacial ablation as an environmental baseline parameter.} 
   Glacial ablation constitutes the principal constraint on regional tourism development as a long-term geomorphic process. 
-  $2010-2020$ observations demonstrate sustained annual retreat ($5.9 km^3$) with 
+  $2010-2020$ observations demonstrate sustained annual retreat ($5.9 km^3$) \cite{1} with 
   limited interannual variability. Our passage posits glacial mass balance systems 
   function independently from tourism dynamics, quantifying their tourism impact 
   as an environmental baseline parameter.
+  %\item \textbf{We assume a linear relationship between tourist numbers and tourism revenue.}
 \end{itemize}
 \section{List of Notation}
 
@@ -220,7 +220,6 @@ make the following basic assumptions, each of which is properly justified.
   $TA^\alpha$      & Tax Allocation in area $\alpha$     \\
   $TR_i$   & Tourism Revenue      \\
   $DS_i$      & Resident Dissatisfaction       \\
-  $G_i$        & Glacier Melt Volume      \\
   $C_i$        & Carbon Emissions      \\
   $S_i$  & Infrastructure Stress      
   \end{tblr}
@@ -228,7 +227,6 @@ make the following basic assumptions, each of which is properly justified.
 \end{table}
 
 \section{Data Pre-processing}
-\subsection{Data Collection}
 Since there is no data provided in the question, we consulted relevant survey 
 results and research reports. The data we found about Greenhouse Gas Emissions, Number of Tourists and Total Tourism Revenue from 2011 to 2023 are as Table \ref{tab:tourism}:
 % \marginnote{Given the substantial disruptions caused by the COVID-19 pandemic to the tourism sector during 2021-2022, our passage will systematically exclude anomalous observations from this period to ensure analytical validity.}
@@ -328,13 +326,28 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
   \end{figure}
   \item \textbf{Tax income}\par
   We know from the local regulations of Juneau that the local government imposes 9\% Hotel/Motel Tax and 5\% Sales Tax on tourists, with a total tax rate of 14\%. From this, we can conclude that the relationship between local taxes and tourist consumption, that is, local economic income, is:
-  $$TA^\alpha = 0.14 \times TR_i$$
+  \begin{equation}
+    \label{eq:tax}
+    TA^\alpha = 0.14 \times TR_i
+  \end{equation}
   where $TA$ is the total tax income and $TR$ is the total tourism revenue.
+  \item \textbf{Calculate the total number of visitors}\par
+  Given the missing data on total tourist numbers for certain years and the significant positive correlation between cruise tourist numbers and total tourist volume, we incorporated the total tourist volume and cruise tourist numbers from 2011 to 2019 into the following regression equation:
+
+\begin{equation}
+  \label{eq:totalvisitor}
+C_i = \beta_0 + \beta_1 \cdot C_i^{\text{cruise}} + \epsilon
+\end{equation}
+
+The parameter estimation yielded:  
+\(\beta_0 = 166\,878.151\), \(\beta_1 = 1.572\)
+\item \textbf{Limitation of total number of tourists}\par
+According to the terms of the agreement announced by the city, beginning in 2026, a daily passenger capacity limit of 16,000 will be enforced from Sunday to Friday, while Saturdays will be restricted to 12,000 passengers.  
+Combined with the city of Juneau's 200 navigable days per year for cruise ships, these constraints yield a maximum annual cruise passenger volume of approximately 2,628,600 passengers/year under this policy. Based on \eqref{eq:totalvisitor}, the annual maximum tourist capacity is calculated as 4,299,037 passengers/year.
   \item \textbf{Calculation of Daily Visitor Distribution}\par
-  Based on the annual total of 1,638,902 cruise visitors in Juneau City Port in 2023 and the recorded days exceeding daily visitor thresholds (Table \ref{tab:thresholds}), we assume the daily visitor count
+  Based on the annual total of 1,638,902 cruise visitors in Juneau City Port in 2023 and the recorded days exceeding daily visitor thresholds (Table \ref{tab:threshold}), we assume the daily visitor count
   \begin{table}[h!]
     \centering
-    \label{tab:thresholds}
     \rowcolors{2}{gray!10}{white} % 斑马纹：偶数行浅灰填充，奇数行白色
     \begin{tabular}{cc}
       \toprule
@@ -359,7 +372,8 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
       \bottomrule
     \end{tabular}
     \caption{Daily Visitor Thresholds and Exceedance Days in 2023}
-  \end{table}
+    \label{tab:threshold} % label移至caption后以符合交叉引用规范
+\end{table}
 
   $V^{daily}$ follows a normal distribution $\mathcal{N}(\mu, \sigma^2)$. The probability distribution fitting proceeds as follows:
   $$\mu = \frac{1{,}638{,}902}{365} \approx 4{,}490.1 \, \text{visitors/day}$$
@@ -371,6 +385,11 @@ results and research reports. The data we found about Greenhouse Gas Emissions, 
   A regression relationship between the standardized variable and visitor count is established:
   $$v^{daily}_i - \mu = \sigma Z_i + \epsilon$$
   An intercept-free regression model is employed for fitting, yielding an estimated standard deviation $\sigma = 4589.3$ in Figure \ref{fig:dailyvisitor}.\par
+  \begin{figure}
+    \centering
+    \includegraphics[width=15cm]{dailyvisitor.pdf}
+    \caption{Daily Visitor Distribution in Juneau City} \label{fig:dailyvisitor}
+  \end{figure}
   In summary, the daily tourist volume in Juneau City approximately follows a normal distribution 
   \begin{equation}
     \label{eq:dailyvisitor}
@@ -584,326 +603,165 @@ Scheme & Annual Visitors (M) & $TA^{environment}$ (\%) & Total Revenue (million 
 
 
 \subsection{Sensitivity analysis}
-\textbf{Short-term Motivation} refers to a brief period of above-average performance by a player
-following a motivating event (e.g., a breaking serve) during a match, a phenomenon known
-in sports as "hot hands". We developed a probabilistic model that quantifies Short-term
-Motivation as an increase in serve success rate.\par
-The following two assumptions are necessary:
+To evaluate the model robustness and analyze the impact of key parameters on the results, this study conducted a sensitivity analysis on three parameters: tourist capacity, environmental tax rate, and satisfaction threshold. The analysis results demonstrate that the model exhibits robust stability under parameter variations, with the variations of all indicators remaining within acceptable ranges.
+\subsubsection{Parameter Impact Analysis}
+By comparing the original results with those from the sensitivity analysis, the following variations were observed:
 \begin{itemize}
-  \item When a player wins a point, he experiences a short-term "motivational" effect that increases
-  the probability of winning the next point.
-  \item Lifting effects are cumulative. A string of successes may have a positive psychological
-  and emotional effect on a player, so that a player winning more points in a row will result
-  in a greater probability of winning the next point on serve.
+  \item \textbf{Economic benefits:} The mean value remained stable at 425.6M, with fluctuation range narrowing from 352.4M to 498.7M, indicating high stability of economic benefits under parameter variations.
+  \item \textbf{Carbon emissions:} The mean value slightly increased to 47,235t (approximately 13.8\% growth), with fluctuation range shifting from 41,876t to 54,328t, demonstrating strong robustness of carbon emission control policies.
+  \item \textbf{Tax ratio:} The mean value maintained at 75.3\%, with stable fluctuation range between 52.4\% and 87.6\%, reflecting favorable adaptability and stability of tax policies.
+  \item \textbf{Tourist volume:} The average annual number of tourists remained at 2.758M/yr, and the average daily number of tourists was about 7556, indicating that the tourist management strategy is sustainable.
 \end{itemize}
-Here $i$ denotes the number of consecutive points scored by a player $A$ or his opponent $B$;
-and $m_i$ denotes the increase in the rate of serving points on a player’s next serve after winning
-$i$points consecutively due to the short-term motivation gained. Then, the probability of winning
-the next serve under short-term motivation $p_s$ versus $q_s$ is calculated by \eqref{eq01}.
-\begin{equation}
-  \begin{split}
-    p_s &= p_f(1+m_i^A);\\
-    q_s &= q_f(1+m_i^B),
-  \end{split}
-  \label{eq01}
-\end{equation}
-where $p_f$ and $q_f$ are the scoring probabilities before player $A$ and player $B$ are motivated,
-respectively.\par
-The short-term motivation that a player receives for scoring a game $n$ times in a row is
-referred to as $n$-order short-term motivation. Using the dataset given in the title, we statistically
-obtained a plot of the total number of short-term motivations occurring in a match versus order,
-and the results are shown in Figure \ref{fig3}. \par
-\begin{figure}[h]
+\subsubsection{Sensitivity Analysis Methodology}
+The sensitivity analysis employed a stratified sampling strategy:
+\begin{itemize}
+  \item Moderate interval (tourist capacity: 26,000–28,000, tax rate: 70\%–85\%, satisfaction threshold: 13–17) was sampled with 20 points to precisely capture subtle variations within this range.
+  \item High-low intervals (i.e., boundary intervals) representing extreme scenarios were sampled with 15 points to balance computational efficiency and analytical quality.
+\end{itemize}
+This approach ensured precise analysis of critical parameter ranges while optimizing the allocation of computational resources, thereby enhancing the practical applicability of the sensitivity analysis.
+\subsubsection{Differences from the Original Model}
+\begin{itemize}
+  \item \textbf{Tourist capacity constraint:} The original model is 4,299,037 persons/year, while the sensitivity analysis adjusted it to 2,500,000–3,000,000 persons/year.
+  \item \textbf{Tax rate constraint:} The original model used a range of 0–1 (0–100\%), whereas the sensitivity analysis narrowed it to 0.5–1 (50–100\%).
+  \item \textbf{Satisfaction threshold:} The original model employed a fixed value 15, while the sensitivity analysis expanded it to a range of 10\%–20\%.
+  \item \textbf{Sampling method:} The original model adopted continuous optimization, whereas the sensitivity analysis utilized stratified sampling (15/20/15 points).
+\end{itemize}
+\subsubsection{Robustness Conclusions}
+Based on the sensitivity analysis results, the following conclusions were drawn:
+\begin{itemize}
+  \item \textbf{Model stability:} A feasible solution can be obtained at all 50 sampling points, the Pareto front maintains continuity and smoothness, the objective function converges well, and there is no obvious oscillation.
+  \item \textbf{Parameter sensitivity:} Tourist capacity has the most significant impact on economic benefits and carbon emissions, the impact of tax rate changes on economic benefits is relatively mild, and the impact of satisfaction threshold on various indicators is relatively balanced. Our model is robust as a whole, the sensitivity of key parameters is within a controllable range, and the optimization results have strong practical value.
+\end{itemize}
+\begin{figure}
   \centering
-  \includegraphics[width=12cm]{continue_winning.pdf}
-  \caption{The number of short-term motivations of different orders in a match.} \label{fig4}
-  \label{fig3}
+  \includegraphics[width=\textwidth]{sensitivityanalysis.pdf}
+  \caption{Sensitivity analysis results}
+  \label{fig:sensitivity}
 \end{figure}
-It is clear to see that short-term motivations of order four
-and above rarely occur in the dataset used in this study. Therefore, only short-term motivations
-of order three and below are considered in this paper.\par
-Short-termmotivation focuses on short-termstatus enhancement during matches and ignores
-sources of motivation on a longer time scale in the player’s lifetime, so we continue to introduce
-a \textbf{confidence-boosting factor}.\par
-A new tuning parameter $\lambda$ is introduced, which represents the effect of the confidence
-boosting factor on the success rate of the next serve, the probabilities after the effect are
-expressed as $p_s$ and $q_s$ – see equation \eqref{eq02}
-\begin{equation}
-  \begin{split}
-    p_c = \frac{T_{AB}}{\lambda} p_t + \left(1 - \frac{T_{AB}}{\lambda}\right) p_0;\\
-  q_c = \frac{T_{AB}}{\lambda} q_t + \left(1 - \frac{T_{AB}}{\lambda}\right) q_0,
-  \end{split}
-  \label{eq02}
-\end{equation}
-where $T_{AB}$ denotes the cumulative total score of the opposing players since the start of the
-match, and $p_t$ and $q_t$ denote the probability of scoring for player $A$ and player $B$, respectively,
-since the start of the match up to the present. $p_0$ and $q_0$ denote the historical data on the success
-rate of the opposing teams’ serves on the grass court surface prior to the current match (source:
-\url{https://www.infosys.com/})\par
-Eq. (2) describes the phenomenon that a player’s historical results always have the greatest
-impact on player status at the start of a match, and then diminish as the match progresses - the
-performance of the current match begins to influence player play more.\par
-We then performed a linear interpolation of the obtained probabilities. The interpolation
-coefficient is the cumulative total score of the current pair divided by the coefficient $\lambda$ (i.e.$\frac{T_{AB}}{\lambda}$).\par
-The short-term motivation is fluctuating as the match progresses, while the confidence boost
-takes into account the player’s self-perception established over the course of his career as well
-as the current situation in the match, which is the "undertone" of the motivated state, therefore,
-we use $pc$ and $qc$ in Eq. \eqref{eq02} instead of $p_f$ and $q_f$ in Eq. \eqref{eq01}, we can get the success rate of the
-next serve after considering the short-term motivation and confidence improvement:
-\begin{equation*}
-  \begin{split}
-    p = \left[ \frac{T_{AB}}{\lambda} \cdot p_c + \left( 1 - \frac{T_{AB}}{\lambda} \right) p_t \right] (1 + m_i^A);\\
-    q = \left[ \frac{T_{AB}}{\lambda} \cdot q_c + \left( 1 - \frac{T_{AB}}{\lambda} \right) q_t \right] (1 + m_i^B).
-  \end{split}
-\end{equation*}
-The above equation shows the effect of short-term motivation and confidence enhancement
-on serve percentage.\par
-In tennis matches, players typically have an advantage when serving. According to the
-data we have collected, the serving success rate of professional players exceeds $50\%$. Based
-on this understanding, \textbf{players gain confidence in serving games.} Due to this "confidence
-boost," we have incorporated the player’s performance in serving games into consideration in
-our model.
-\subsubsection{Monte Carlo Simulation for Winning Probability}
-As a sports competition, there is a great deal of uncertainty in tennis, for which Monte Carlo
-algorithms can provide probabilistic estimates of the outcome.\par
-Based on the serve success rate obtained in the previous section, we use the Monte Carlo
-algorithm to simulate each ball, and ultimately obtain the winners and losers of each game, set
-and even the whole match. Then in this process, the randomness and diversity of the simulation
-are ensured by generating a large number of random number seeds.\par
-Here is the pseudo-code for the algorithm we used:\par
-\begin{center}
-\begin{tabular}{clc}
-{\bf Symbols} & {\bf Description} & \quad {\bf Unit} \\[0.25cm]
-$h$ & Convection heat transfer coefficient & \quad W/(m$^2 \cdot$ K) 
-\\[0.2cm]
-$k$ & Thermal conductivity & \quad W/(m $\cdot$ K) \\[0.2cm]
-$c_p$ & Specific heat & \quad J/(kg $\cdot$ K) \\[0.2cm]
-$\rho$ & Density & \quad kg/m$^2$ \\[0.2cm]
-$\delta$ & Thickness & \quad m \\[0.2cm]
-$t$ & Temperature & \quad $^\circ$C, K \\[0.2cm]
-$\tau$ & Time & \quad s, min, h \\[0.2cm]
-$q_m$ & Mass flow & \quad kg/s \\[0.2cm]
-$\Phi$ & Heat transfer power & \quad W \\[0.2cm]
-$T$ & A period of time & \quad s, min, h \\[0.2cm]
-$V$ & Volume & \quad m$^3$, L \\[0.2cm]
-$M,\,m$ & Mass & \quad kg \\[0.2cm]
-$A$ & Aera & \quad m$^2$ \\[0.2cm]
-$a,\,b,\,c$ & The size of a bathtub  & \quad m$^3$
-\end{tabular}
-\end{center}
-
-\noindent where we define the main parameters while specific value of those parameters will be given later.
-
-\section{Model Overview}
-
-In our basic model, we aim at three goals: keeping the temperature as even as possible, making it close to the initial temperature and decreasing the water consumption.
-
-We start with the simple sub-model where hot water is added constantly.
-At first we introduce convection heat transfer control equations in rectangular coordinate system. Then we define the mean temperature of bath water.
-
-Afterwards, we introduce Newton cooling formula to determine heat transfer
-capacity. After deriving the value of parameters, we get calculating results via formula deduction and simulating results via CFD.
-
-Secondly, we present the complicated sub-model in which hot water is
-added discontinuously. We define an iteration consisting of two process:
-heating and standby. As for heating process, we derive control equations and boundary conditions. As for standby process, considering energy conservation law, we deduce the relationship of total heat dissipating capacity and time.
-
-Then we determine the time and amount of added hot water. After deriving the value of parameters, we get calculating results via formula deduction and simulating results via CFD.
-
-At last, we define two criteria to evaluate those two ways of adding hot water. Then we propose optimal strategy for the user in a bathtub.
-The whole modeling process can be shown as follows.
-
-\begin{figure}[h] 
+\section{Task2: Promotion of development solutions}
+\subsection{Data Collection}
+With regard to Task 2, we need to extend the aforementioned model to other tourist cities. Since no specific city selection was provided in the problem statement, we conducted data collection for prominent tourist cities in the United States. \par
+After reviewing relevant literature, we ultimately selected 20 representative tourist cities including Las Vegas. Regarding the selection of urban characteristic variables, taking into account data availability, we finally chose eight variables including GDP and real per capita income. Specifically, GDP and nominal per capita income serve to measure the city's economic performance, while real per capita income reflects local residents' living standards. The growth rates of variables such as GDP demonstrate the city's development potential.
+\subsection{Model Construction}
+We conducted a K-means clustering analysis on the collected dataset encompassing 20 cities. A customized function was first defined to compute the compound annual growth rate (CAGR) for each economic indicator using the formula:
+  $$\text{CAGR} = \left( \frac{x_T}{x_0} \right)^{\frac{1}{T-1}} - 1$$
+  Subsequently, the data were standardized through z-score normalization $z_i = \frac{x_i - \mu}{\sigma}$, where $\mu$ and $\sigma$ represent the mean and standard deviation respectively, to ensure the effectiveness of distance-based computations in the K-means algorithm.
+  
+  To determine the optimal number of clusters, we calculated the within-cluster sum of squared errors (SSE) for cluster numbers ranging from 1 to 10. An elbow plot was generated to visualize the SSE variation, where the inflection point at 3 clusters was identified as the optimal solution. Based on this determination, the K-means algorithm was implemented with 3 clusters, and the results were visualized in corresponding graphical representations. 
+\subsection{Result Analysis}
+Following the clustering analysis conducted on 20 U.S. tourist cities, we derived the conclusions illustrated in Figure \ref{fig:kmeansresult}. Based on the inflection point at k=3 identified through the Elbow Method, we categorized these cities into three clusters. This classification aligns precisely with three distinct tourism development strategies: prioritizing economic growth, emphasizing environmental protection, and pursuing balanced development. The results further validate the feasibility of the model established in Task 1 of this study.\par
+\begin{figure}[h]
 \centering
-\includegraphics[width=12cm]{fig1.jpg}
-\caption{Modeling process} \label{fig1}
+  \includegraphics[width=\textwidth]{Kmeans.pdf}
+  \caption{K-means cluster analysis results}
+  \label{fig:kmeansresult}
 \end{figure}
+Through systematic observation of the clustering outcomes, we have formulated classification criteria for these cities as follows:\par
+\subsubsection*{Cluster 1 (Santa Fe, Denver, Miami, Salt Lake City)}
+\textbf{Medium Economic Scale, High Economic Growth → Prioritize Economic Development}
+\begin{itemize}
+    \item \textbf{High Economic Growth Potential}: Average GDP growth rates range between \textbf{0.10--0.14}, significantly higher than other clusters.
+    \item \textbf{Rapid Income Growth}: Nominal income growth reaches \textbf{0.07--0.10}, closely aligning with GDP growth rates, indicating an active consumer market and effective translation of economic development into improved living standards.
+    \item \textbf{Moderate Economic Scale}: Mean GDP ranges from \textbf{\$80.64 million to \$434 million}, reflecting an economy yet to reach saturation, with substantial untapped development potential.
+\end{itemize}
 
-\section{Sub-model I : Adding Water Continuously}
+\textbf{Development Recommendations:} \\
+These cities exhibit robust economic momentum, high efficiency, and favorable returns on economic investments. Prioritize scaling investments (e.g., tourism infrastructure, commercial development) to unleash economic potential. Short-term goals should focus on maximizing growth, aligning with high tourist volume, high economic revenue, and large infrastructure investment solutions in the \textbf{Task1 model feasible set}.
 
-We first establish the sub-model based on the condition that a person add water continuously to reheat the bathing water. Then we use Computational Fluid Dynamics (CFD) to simulate the change of water temperature in the bathtub. At last, we evaluate the model with the criteria which have been defined before.
+\vspace{1em}
+\hrule
+\vspace{1em}
 
-\subsection{Model Establishment}
+\subsubsection*{Cluster 2 (Atlanta, Honolulu, Las Vegas, etc.)}
+\textbf{Low Economic Scale, Low Economic Growth → Prioritize Environmental Protection for Sustainable Development}
+\begin{itemize}
+    \item \textbf{Weak Economic Indicators}: Low mean GDP (\textbf{\$26.64 million--\$485 million}), with real income growth stagnation in some cities (e.g., Savannah: \textbf{real\_income\_calculate\_growth = -0.02}).
+    \item \textbf{Unsustainable High Growth}: A few cities (e.g., Las Vegas) show GDP growth up to \textbf{0.15}, but nominal income growth remains at \textbf{0.07}, suggesting low industrial value-added, inefficient economic development, and environmental overdraft risks. Prioritize environmental conservation for high-quality sustainability.
+\end{itemize}
 
-Since we try to keep the temperature of the hot water in bathtub to be even, we have to derive the amount of inflow water and the energy dissipated by the hot water into the air.
+\textbf{Development Recommendations:} \\
+Address sluggish economic growth by enhancing industrial value-added, promoting green tourism (e.g. ecotourism, cultural heritage preservation), and balancing short-term gains with long-term sustainability. Align with \textbf{Task1 model solutions} emphasizing minimal environmental disruption, low greenhouse gas emissions, and high environmental protection investments.
 
-We derive the basic convection heat transfer control equations based on the former scientists’ achievement. Then, we define the mean temperature of bath water. Afterwards, we determine two types of heat transfer: the boundary heat transfer and the evaporation heat transfer. Combining thermodynamic formulas, we derive calculating results. Via Fluent software, we get simulation results.
+\vspace{1em}
+\hrule
+\vspace{1em}
 
-\subsubsection{Control Equations and Boundary Conditions}
+\subsubsection*{Cluster 3 (San Francisco, New York, Los Angeles, etc.)}
+\textbf{High Economic Scale, Low Economic Growth → Balanced Development}
+\begin{itemize}
+    \item \textbf{Exceptionally Large Economic Scale}: Mean GDP exceeds \textbf{\$680 million} (e.g., New York: \textbf{\$20.1 billion}), nearing economic saturation.
+    \item \textbf{Stable Growth}: GDP growth (\textbf{0.08--0.09}) and income growth (\textbf{0.05--0.06}) remain moderate, indicative of economic maturity.
+    \item \textbf{High Income Levels}: Real income averages (e.g., San Francisco: \textbf{\$90,806}) significantly surpass other clusters, reflecting stable consumption structures.
+\end{itemize}
 
-According to thermodynamics knowledge, we recall on basic convection
-heat transfer control equations in rectangular coordinate system. Those
-equations show the relationship of the temperature of the bathtub water in space.
+\textbf{Development Recommendations:} \\
+Optimize industrial structures (e.g., high-end cultural tourism, smart tourism) to enhance resource efficiency and achieve multidimensional equilibrium across economy, society, and environment. Implement \textbf{Task1 model solutions} balancing economic revenue with environmental protection, emphasizing high efficiency in cross-sectoral investments to drive advanced development.
+\section{Task3: Writing Memorandum}
+\subsection{Data Preconditions}
+Since question 3 requires us to mention the forecast of data in the memorandum, and considering that the short-term forecast of Juneau is also an indispensable step in exploring the reasons for the city's sustainable tourism planning, we will make a forecast of the number of tourists from 2024 to 2030.
+\subsubsection*{Method selection and model introduction}
+\begin{itemize}
+  \item Considering the data gaps in tourist statistics during 2020 and 2021 and the short-term forecasting objectives of this prediction task, through comparative analysis of various forecasting methodologies, we determined to employ the grey prediction method for subsequent data projections.
+  \item Grey prediction analysis constitutes a small-sample forecasting approach tailored for incomplete information systems. Its core mechanism involves applying accumulation generation operations to fluctuating limited data, thereby mitigating stochastic disturbances and revealing latent continuous evolutionary patterns underlying the dataset. This method initially converts raw discrete data into a monotonically increasing sequence, constructs a dynamic model describing the system's holistic trends through exponential functions, and deduces future development trends by solving model parameters. Particularly applicable to short-term forecasting scenarios characterized by limited data volume, strong trend tendencies, yet significant fluctuations, the prediction process effectively balances computational efficiency with pattern recognition requirements.
+\end{itemize}
+\subsubsection*{Prediction process}
+\begin{itemize}
+  \item \textbf{Data preprocessing:} Considering that the grey prediction method requires continuous tourist data, and tourist data changed suddenly in 2020 and 2021 due to the COVID-19 pandemic, we only use data from 2010 to 2019 as the base volume.
+  \item \textbf{Establishing the Grey Prediction Model GM(1,1):}
+  \begin{itemize}
+    \item \textbf{Original data sequence:} The collated tourist volume data is treated as the original data sequence \( X^{(0)} = \{x^{(0)}(1), x^{(0)}(2), \ldots, x^{(0)}(n)\} \).
+    \item \textbf{First-order Accumulated Generating Operation:} Apply 1-AGO to the original data to generate a new sequence \( X^{(1)} = \{x^{(1)}(1), x^{(1)}(2), \ldots, x^{(1)}(n)\} \), where:
+    $$x^{(1)}(k) = \sum_{i=1}^{k} x^{(0)}(i) $$  
+    \item \textbf{Calculate cumulative sums:}\[
+\begin{aligned}
+x^{(1)}(1) &= 1532400, \\
+x^{(1)}(2) &= 1532400 + 1556800 = 3089200, \\
+x^{(1)}(3) &= 3089200 + 1586000 = 4675200, \\
+&\vdots \\
+x^{(1)}(12) &= 19833102 + 2760678 = 22593780.
+\end{aligned}
+\]
+\item \textbf{Construct data matrix and vector:} Build the data matrix \( B \) and vector \( Y \) based on \( X^{(1)} \) for model parameter estimation:
+\[
+B = \begin{bmatrix}
+-\frac{1}{2}\left(x^{(1)}(1) + x^{(1)}(2)\right) & 1 \\
+-\frac{1}{2}\left(x^{(1)}(2) + x^{(1)}(3)\right) & 1 \\
+\vdots & \vdots \\
+-\frac{1}{2}\left(x^{(1)}(11) + x^{(1)}(12)\right) & 1
+\end{bmatrix}, \quad 
+Y = \begin{bmatrix}
+x^{(0)}(2) \\
+x^{(0)}(3) \\
+\vdots \\
+x^{(0)}(12)
+\end{bmatrix}
+\]
+\item \textbf{Estimate model parameters:}  Use the least squares method to estimate the parameters \( a \) (development coefficient) and \( b \) (grey action quantity):
+\[
+\begin{bmatrix}
+a \\
+b
+\end{bmatrix} = \left(B^T B\right)^{-1} B^T Y
+\]
+\item \textbf{Establish prediction model:} Construct the grey prediction model using parameters \( a \) and \( b \), and predict future values:
+\[
+\hat{x}^{(1)}(k) = \left(x^{(1)}(1) - \frac{b}{a}\right) e^{-a(k-1)} + \frac{b}{a}
+\]
 
-We assume the hot water in the bathtub as a cube. Then we put it into a
-rectangular coordinate system. The length, width, and height of it is $a,\, b$ and $c$.
-
-\begin{figure}[h] 
-\centering
-\includegraphics[width=8cm]{fig2.jpg}
-\caption{Modeling process} \label{fig2}
+Obtain the predicted \( \hat{x}^{(0)}(k) \) through inverse accumulation:
+\[
+\hat{x}^{(0)}(k) = \hat{x}^{(1)}(k) - \hat{x}^{(1)}(k-1)
+\]
+  \end{itemize}
+\end{itemize}
+\subsubsection*{Prediction results}
+Through the above system modeling and data analysis, we obtain a multi-dimensional prediction result for the development of tourism in Juno City: by inputting the tourist volume forecast data into the coupling model of carbon emissions, resident satisfaction and tourism revenue constructed in the early stage, the results show that the number of tourists will continue to rise, and it is expected to reach about 3 million in 2028; At the same time, tourism revenue will grow exponentially, with a significant increase of 117.1\% from the 2019 benchmark. It is worth noting that the expansion of tourism will have multiple negative effects – carbon emissions will increase dramatically, expected to reach 439,000 tonnes in 2028, and more challenging is the indicator of resident dissatisfaction, which will break through the 15\% threshold in 2026 and continue to rise, due to the dual pressure of overloaded infrastructure and deteriorating environmental quality. The model shows that without an effective regulatory mechanism, Juno will face risks such as degradation of ecosystem services, continuous deterioration of community relations, and collapse of urban carrying capacity, which highlights the urgency of tourism scale control and sustainable development strategy.
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{dataprediction.pdf}
+  \caption{Data Preconditions from 2023 to 2030}
+  \label{fig:predict}
 \end{figure}
-
-In the basis of this, we introduce the following equations \cite{5}:
-
-\begin{itemize}
-\item {\bf Continuity equation:}
-\end{itemize}
-
-\begin{equation} \label{eq1}
-\frac{\partial u}{\partial x} + \frac{\partial v}{\partial y} +\frac{\partial w}{\partial z} =0
-\end{equation}
-
-\noindent where the first component is the change of fluid mass along the $X$-ray. The second component is the change of fluid mass along the $Y$-ray. And the third component is the change of fluid mass along the $Z$-ray. The sum of the change in mass along those three directions is zero.
-
-\begin{itemize}
-\item {\bf Moment differential equation (N-S equations):}
-\end{itemize}
-
-\begin{equation} \label{eq2}
-\left\{
-\begin{array}{l} \!\!
-\rho \Big(u \dfrac{\partial u}{\partial x} + v \dfrac{\partial u}{\partial y} + w\dfrac{\partial u}{\partial z} \Big) = -\dfrac{\partial p}{\partial x} + \eta \Big(\dfrac{\partial^2 u}{\partial x^2} + \dfrac{\partial^2 u}{\partial y^2} + \dfrac{\partial^2 u}{\partial z^2} \Big) \\[0.3cm]
-\rho \Big(u \dfrac{\partial v}{\partial x} + v \dfrac{\partial v}{\partial y} + w\dfrac{\partial v}{\partial z} \Big) = -\dfrac{\partial p}{\partial y} + \eta \Big(\dfrac{\partial^2 v}{\partial x^2} + \dfrac{\partial^2 v}{\partial y^2} + \dfrac{\partial^2 v}{\partial z^2} \Big) \\[0.3cm]
-\rho \Big(u \dfrac{\partial w}{\partial x} + v \dfrac{\partial w}{\partial y} + w\dfrac{\partial w}{\partial z} \Big) = -g-\dfrac{\partial p}{\partial z} + \eta \Big(\dfrac{\partial^2 w}{\partial x^2} + \dfrac{\partial^2 w}{\partial y^2} + \dfrac{\partial^2 w}{\partial z^2} \Big)  
-\end{array}
-\right.
-\end{equation}
-
-\begin{itemize}
-\item {\bf Energy differential equation:}
-\end{itemize}
-
-\begin{equation} \label{eq3}
-\rho c_p \Big( u\frac{\partial t}{\partial x} + v\frac{\partial t}{\partial y} + w\frac{\partial t}{\partial z} \Big) = \lambda \Big(\frac{\partial^2 t}{\partial x^2} + \frac{\partial^2 t}{\partial y^2} + \frac{\partial^2 t}{\partial z^2} \Big)
-\end{equation}
-
-\noindent where the left three components are convection terms while the right three components are conduction terms.
-
-By Equation \eqref{eq3}, we have ......
-
-......
-
-On the right surface in Fig. \ref{fig2}, the water also transfers heat firstly with bathtub inner surfaces and then the heat comes into air. The boundary condition here is ......
-
-\subsubsection{Definition of the Mean Temperature}
-
-......
-
-\subsubsection{Determination of Heat Transfer Capacity}
-
-......
-
-\section{Sub-model II: Adding Water Discontinuously}
-
-In order to establish the unsteady sub-model, we recall on the working principle of air conditioners. The heating performance of air conditions consist of two processes: heating and standby. After the user set a temperature, the air conditioner will begin to heat until the expected temperature is reached. Then it will go standby. When the temperature get below the expected temperature, the air conditioner begin to work again. As it works in this circle, the temperature remains the expected one.
-
-Inspired by this, we divide the bathtub working into two processes: adding
-hot water until the expected temperature is reached, then keeping this
-condition for a while unless the temperature is lower than a specific value. Iterating this circle ceaselessly will ensure the temperature kept relatively stable.
-
-\subsection{Heating Model}
-
-\subsubsection{Control Equations and Boundary Conditions}
-
-\subsubsection{Determination of Inflow Time and Amount}
-
-\subsection{Standby Model}
-
-\subsection{Results}
-
-\quad~ We first give the value of parameters based on others’ studies. Then we get the calculation results and simulating results via those data.
-
-\subsubsection{Determination of Parameters}
-
-After establishing the model, we have to determine the value of some
-important parameters.
-
-As scholar Beum Kim points out, the optimal temperature for bath is
-between 41 and 45$^\circ$C [1]. Meanwhile, according to Shimodozono's study, 41$^\circ$C warm water bath is the perfect choice for individual health [2]. So it is reasonable for us to focus on $41^\circ$C $\sim 45^\circ$C. Because adding hot water continuously is a steady process, so the mean temperature of bath water is supposed to be constant. We value the temperature of inflow and outflow water with the maximum and minimum temperature respectively.
-
-The values of all parameters needed are shown as follows:
-
-.....
-
-\subsubsection{Calculating Results}
-
-Putting the above value of parameters into the equations we derived before, we can get the some data as follows:
-
-%%普通表格
-\begin{table}[h]  %h表示固定在当前位置
-\centering        %设置居中
-\caption{The calculating results}  %表标题
-\vspace{0.15cm}
-\label{tab2}                       %设置表的引用标签
-\begin{tabular}{|c|c|c|}  %3个c表示3列, |可选, 表示绘制各列间的竖线
-\hline                    %画横线
-Variables & Values & Unit     \\ \hline  %各列间用&隔开
-$A_1$     & 1.05   &   $m^2$  \\ \hline
-$A_2$     & 2.24   &   $m^2$  \\ \hline
-$\Phi_1$  & 189.00 &   $W$   \\ \hline
-$\Phi_2$  & 43.47  &   $W$   \\ \hline
-$\Phi$    & 232.47 &   $W$   \\ \hline
-$q_m$     & 0.014  &   $g/s$ \\ \hline
-\end{tabular}
-\end{table}
-
-From Table \ref{tab2}, ......
-
-......
-
-\section{Correction and Contrast of Sub-Models}
-
-After establishing two basic sub-models, we have to correct them in consideration of evaporation heat transfer. Then we define two evaluation criteria to compare the two sub-models in order to determine the optimal bath strategy.
-
-\subsection{Correction with Evaporation Heat Transfer}
-
-Someone may confuse about the above results: why the mass flow in the first sub-model is so small? Why the standby time is so long? Actually, the above two sub-models are based on ideal conditions without consideration of the change of boundary conditions, the motions made by the person in bathtub and the evaporation of bath water, etc. The influence of personal motions will be discussed later. Here we introducing the evaporation of bath water to correct sub-models.
-
-\subsection{Contrast of Two Sub-Models}
-
-Firstly we define two evaluation criteria. Then we contrast the two submodels via these two criteria. Thus we can derive the best strategy for the person in the bathtub to adopt.
-
-\section{Model Analysis and Sensitivity Analysis}
-
-\subsection{The Influence of Different Bathtubs}
-
-Definitely, the difference in shape and volume of the tub affects the
-convection heat transfer. Examining the relationship between them can help
-people choose optimal bathtubs.
-
-\subsubsection{Different Volumes of Bathtubs}
-
-In reality, a cup of water will be cooled down rapidly. However, it takes quite long time for a bucket of water to become cool. That is because their volume is different and the specific heat of water is very large. So that the decrease of temperature is not obvious if the volume of water is huge. That also explains why it takes 45 min for 320 L water to be cooled by 1$^\circ$C.
-
-In order to examine the influence of volume, we analyze our sub-models
-by conducting sensitivity Analysis to them.
-
-We assume the initial volume to be 280 L and change it by $\pm 5$\%, $\pm 8$\%, $\pm 12$\% and $\pm 15$\%. With the aid of sub-models we established before, the variation of some parameters turns out to be as follows
-
-%%三线表
-\begin{table}[h] %h表示固定在当前位置
-\centering  %设置居中
-\caption{Variation of some parameters}  %表标题
-\label{tab7} %设置表的引用标签
-\begin{tabular}{ccccccc} %7个c表示7列, c表示每列居中对齐, 还有l和r可选
-\toprule  %画顶端横线
-$V$      & $A_1$   & $A_2$   & $T_2$    & $q_{m1}$ & $q_{m2}$ & $\Phi_q$ \\
-\midrule  %画中间横线
--15.00\% & -5.06\% & -9.31\% & -12.67\% & -2.67\%  & -14.14\% & -5.80\% \\
--12.00\% & -4.04\% & -7.43\% & -10.09\% & -2.13\%  & -11.31\% & -4.63\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
--8.00\%  & -2.68\% & -4.94\% & -6.68\%  & -1.41\%  & -7.54\%  & -3.07\% \\
-\bottomrule  %画底部横线
-\end{tabular}
-\end{table}
 
 \section{Strength and Weakness}
 
@@ -968,62 +826,95 @@ Our before discussion is based on ideal assumptions. In reality, we have to make
 \item[4)] The study method of our establishing model can be applied in other area relative to convection heat transfer, such as air conditioners.
 \end{itemize}
 \end{itemize}
+\newpage
+\newgeometry{left=0pt, right=0pt, top=0pt, bottom=0pt} % 临时去除页边距
+\thispagestyle{empty} % 隐藏页眉页脚
 
+\begin{figure}[p] % [p] 强制图片单独成页
+  \centering
+  \includegraphics[width=\paperwidth, height=\paperheight, keepaspectratio=false]{memo.pdf} % 覆盖整页（允许拉伸）
+  \label{fig:fullpage}
+\end{figure}
+
+\restoregeometry % 恢复原始页边距
 \begin{thebibliography}{99}
-\addcontentsline{toc}{section}{Reference}
+  \bibitem[Davies et al., 2024]{Davies2024}
+  Davies, B., McNabb, R., Bendle, J. et al. 
+  Accelerating glacier volume loss on Juneau Icefield driven by hypsometry and melt-accelerating feedbacks. 
+  \textit{Nature Communications} \textbf{15}, 5099 (2024). 
+  \url{https://doi.org/10.1038/s41467-024-49269-y}
+  
+  \bibitem[Wrangell Sentinel, 2023]{glacier_limit}
+  Wrangell Sentinel. 
+  Tour operators will exceed visitor limit at Juneau's Mendenhall Glacier. 
+  \emph{The oldest continuously published newspaper in Alaska}. 
+  Retrieved from \url{https://www.wrangellsentinel.com/story/2023/07/19/news/tour-operators-will-exceed-visitor-limit-at-juneaus-mendenhall-glacier/12096.html}
+  
+  \bibitem[USDA, 2022]{glacier_visitors_2022}
+  United States Department of Agriculture. 
+  Glacier visitor data: 443,000. 
+  Retrieved from \url{https://www.govinfo.gov/content/pkg/GOVPUB-A13-PURL-gpo222163/pdf/GOVPUB-A13-PURL-gpo222163.pdf}
+  
+  \bibitem[City of Juneau, 2023]{tourism_survey}
+  City of Juneau. 
+  Juneau Tourism Survey Report (2021-2023). 
+  Retrieved from \url{https://juneau.org/wp-content/uploads/2021/12/Juneau-Tourism-Survey-Report-REV-12_1_21-1.pdf}
+  
+  \bibitem[JEDC, 2024]{economic_indicators}
+  Juneau Economic Development Council. 
+  The Juneau \& Southeast Alaska Economic Indicators Reports (2012-2024). 
+  Retrieved from \url{https://www.jedc.org/wp-content/uploads/2024/11/2024-JEDC-Juneau-SEAK-Economic-Indicators-and-Outlook-Report.pdf}
+  
+  \bibitem[City of Juneau, 2024]{visitor_circulator}
+  City of Juneau. 
+  Juneau Visitor Circulator Study Final Report. 
+  Retrieved from \url{https://juneau.org/wp-content/uploads/2024/02/Juneau-Visitor-Circulator-Study-Final-Report-2024-1.pdf}
+  
+  \bibitem[EPA, n.d.]{carbon_emission}
+  U.S. Environmental Protection Agency. 
+  EPA Greenhouse Gas Reporting Program: Aggregated County Data. 
+  Retrieved from \url{https://www.epa.gov/ghgreporting}
+  
+  \bibitem[Anonymous, 2013]{tax_environment}
+  The effect of government expenditure on the environment: An empirical investigation. 
+  \emph{Ecological Economics}. 
+  Retrieved from \url{https://doi.org/10.1016/j.ecolecon.2013.04.002}
+  
+  \bibitem[City of Juneau, 2020]{hotel_tax}
+  City of Juneau. 
+  Administrative Guidelines: Hotel/Motel Room Tax Procedure 700. 
+  Retrieved from \url{https://juneau.org/index.php?gf-download=2020%2F01%2F700_Hotel-Motel_Tax_Procedures_2020.pdf}
+  
+  \bibitem[NAHB, n.d.]{housing_cost}
+  National Association of Home Builders. 
+  Housing Economics: Residential Building Cost and Income Ratio. 
+  Retrieved from \url{https://www.nahb.org/news-and-economics/housing-economics}
+  
+  \bibitem[Alaska CRF, n.d.]{carbon_tax_effect}
+  Alaska Carbon Reduction Fund. 
+  Tax implications for carbon emissions. 
+  Retrieved from \url{https://akcarbonreduction.org/}
+  \end{thebibliography}
 
-\bibitem{1} Gi-Beum Kim. Change of the Warm Water Temperature for the Development of Smart Healthecare Bathing System. Hwahak konghak. 2006, 44(3): 270-276.
-\bibitem{2} \url{https://en.wikipedia.org/wiki/Convective_heat_transfer#Newton.27s_law_of_cooling}
-\bibitem{3} \url{https://en.wikipedia.org/wiki/Navier\%E2\%80\%93Stokes_equations}
-\bibitem{4} \url{https://en.wikipedia.org/wiki/Computational_fluid_dynamics}
-\bibitem{5} Holman J P. Heat Transfer (9th ed.), New York: McGraw-Hill, 2002. 
-\bibitem{6} Liu Weiguo, Chen Zhaoping, ZhangYin. Matlab program design and application. Beijing: Higher education press, 2002. (In Chinese)
+% \newpage
 
-\end{thebibliography}
+% \begin{appendices}
 
-\newpage
+% \section{First appendix}
 
-\begin{letter}{Enjoy Your Bath Time!}
+% In addition, your report must include a letter to the Chief Financial Officer (CFO) of the Goodgrant Foundation, Mr. Alpha Chiang, that describes the optimal investment strategy, your modeling approach and major results, and a brief discussion of your proposed concept of a return-on-investment (ROI). This letter should be no more than two pages in length.
 
-From simulation results of real-life situations, we find it takes a period of time for the inflow hot water to spread throughout the bathtub. During this process, the bath water continues transferring heat into air, bathtub and the person in bathtub. The difference between heat transfer capacity makes the temperature of various areas to be different. So that it is difficult to get an evenly maintained temperature throughout the bath water.
+% Here are simulation programmes we used in our model as follow.\\
 
-In order to enjoy a comfortable bath with even temperature of bath water and without wasting too much water, we propose the following suggestions.
+% \textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
+% \lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
 
-\begin{itemize}
-\item Adding hot water consistently
-\item Using smaller bathtub if possible
-\item Decreasing motions during bath
-\item Using bubble bath additives
-\item Arranging more faucets of inflow
-\end{itemize}
+% \section{Second appendix}
 
-\vspace{\parskip}
+% some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
+% \lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
 
-Sincerely yours,
-
-Your friends
-
-\end{letter}
-
-\newpage
-
-\begin{appendices}
-
-\section{First appendix}
-
-In addition, your report must include a letter to the Chief Financial Officer (CFO) of the Goodgrant Foundation, Mr. Alpha Chiang, that describes the optimal investment strategy, your modeling approach and major results, and a brief discussion of your proposed concept of a return-on-investment (ROI). This letter should be no more than two pages in length.
-
-Here are simulation programmes we used in our model as follow.\\
-
-\textbf{\textcolor[rgb]{0.98,0.00,0.00}{Input matlab source:}}
-\lstinputlisting[language=Matlab]{./code/mcmthesis-matlab1.m}
-
-\section{Second appendix}
-
-some more text \textcolor[rgb]{0.98,0.00,0.00}{\textbf{Input C++ source:}}
-\lstinputlisting[language=C++]{./code/mcmthesis-sudoku.cpp}
-
-\end{appendices}
+% \end{appendices}
 
 \newpage
 \newcounter{lastpage}

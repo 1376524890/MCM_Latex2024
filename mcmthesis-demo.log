@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.20)  27 JAN 2025 02:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2025.1.20)  27 JAN 2025 18:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1048,44 +1048,37 @@ Package fontspec Info: Font family 'TeXGyreTermesX(0)' created for font
 (fontspec)             <->s*[1]"[TeXGyreTermesX-BoldSlanted.otf]/OT:script=latn;language=dflt;-ss05;+tnum;+lnum;+smcp;+pcap;mapping=tex-text;"
 
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 89.
+(Font)              scaled to size 12.0pt on input line 91.
 \@quotelevel=\count502
 \@quotereset=\count503
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 89.
- (./mcmthesis-demo.aux
-
-LaTeX Warning: Label `fig1' multiply defined.
-
-
-LaTeX Warning: Label `fig2' multiply defined.
-
-)
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 91.
+ (./mcmthesis-demo.aux)
 \openout1 = `mcmthesis-demo.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 91.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 91.
  (g:/texlive/2024/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 \c@lstlisting=\count504
 
 *geometry* driver: auto-detecting
@@ -1122,7 +1115,7 @@ LaTeX Font Info:    ... okay on input line 89.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 89.
+Package hyperref Info: Link coloring OFF on input line 91.
 (./mcmthesis-demo.out) (./mcmthesis-demo.out)
 \@outlinefile=\write5
 \openout5 = `mcmthesis-demo.out'.
@@ -1133,56 +1126,56 @@ Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 
 \symlegacymaths=\mathgroup11
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 89.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 89.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 89.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 89.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 89.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 89.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 89.
-LaTeX Font Info:    Redeclaring math accent \check on input line 89.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 89.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 89.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 89.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 89.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 89.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 91.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 91.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 91.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 91.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 91.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 91.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 91.
+LaTeX Font Info:    Redeclaring math accent \check on input line 91.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 91.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 91.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 91.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 91.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 91.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 89.
+(Font)              `operators' in the math version `normal' on input line 91.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 89.
+(Font)                  OT1/cmr/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 91.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 89.
+(Font)              `operators' in the math version `bold' on input line 91.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/m/n on input line 89.
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/m/n on input line 91.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 89.
+(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/m/n on input line 91.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/TeXGyreTermesX(0)/m/it on input line 89.
+(Font)                  OT1/cmr/m/it --> TU/TeXGyreTermesX(0)/m/it on input line 91.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/b/n on input line 89.
+(Font)                  OT1/cmr/bx/n --> TU/TeXGyreTermesX(0)/b/n on input line 91.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 89.
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 91.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 89.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 91.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/b/n on input line 89.
+(Font)                  TU/TeXGyreTermesX(0)/m/n --> TU/TeXGyreTermesX(0)/b/n on input line 91.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/TeXGyreTermesX(0)/b/it on input line 89.
+(Font)                  OT1/cmr/bx/it --> TU/TeXGyreTermesX(0)/b/it on input line 91.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 89.
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 91.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 89.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 91.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
  (g:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -1201,8 +1194,8 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'mcmthesis-demo.bbl' found.
  (./mcmthesis-demo.bbl)
-Package biblatex Info: Reference section=0 on input line 89.
-Package biblatex Info: Reference segment=0 on input line 89.
+Package biblatex Info: Reference section=0 on input line 91.
+Package biblatex Info: Reference segment=0 on input line 91.
  (g:/texlive/2024/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
@@ -1211,56 +1204,63 @@ Package caption Info: End \AtBeginDocument code.
  (g:/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 89.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 91.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 140.
+(Font)              scaled to size 12.0pt on input line 138.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 140.
+(Font)              scaled to size 24.88pt on input line 138.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 20.74pt on input line 140.
+(Font)              scaled to size 20.74pt on input line 138.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 140.
- [1
-
-]
+(Font)              scaled to size 14.4pt on input line 138.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 144.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 144.
- (./mcmthesis-demo.toc
+(Font)              scaled to size 8.0pt on input line 138.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
+(Font)              scaled to size 6.0pt on input line 138.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 138.
  (g:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 138.
  (g:/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 1.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 138.
  (g:/texlive/2024/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 1.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 138.
  (g:/texlive/2024/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [2])
+) [1
+
+]
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 142.
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
+(Font)              scaled to size 17.28pt on input line 142.
+ (./mcmthesis-demo.toc)
 \tf@toc=\write6
 \openout6 = `mcmthesis-demo.toc'.
 
- [3]
+ [2]
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 151.
+(Font)              scaled to size 14.4pt on input line 149.
 File: ./figures/totaltour_1.pdf Graphic file (type pdf)
 <use ./figures/totaltour_1.pdf>
 File: ./figures/Work_review02.pdf Graphic file (type pdf)
 <use ./figures/Work_review02.pdf>
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 193.
+(Font)              scaled to size 10.95pt on input line 191.
 
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1270,6 +1270,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [4]
 
+LaTeX Warning: Citation '1' on page 5 undefined on input line 203.
+
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+> Step: build the whole table.
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
@@ -1277,22 +1296,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [5]
-> Step: init table outer spec.
-> Step: parse table options.
-> Step: split table.
-> Step: init table inner spec.
-> Step: parse table inner spec.
-> Step: execute table commands.
-> Step: calculate cell and line sizes.
-> Step: build the whole table.
-> Step: init table outer spec.
-> Step: parse table options.
-> Step: split table.
-> Step: init table inner spec.
-> Step: parse table inner spec.
-> Step: execute table commands.
-> Step: calculate cell and line sizes.
-> Step: build the whole table.
+File: ./figures/Satisfaction Questionnaire.pdf Graphic file (type pdf)
+<use ./figures/Satisfaction Questionnaire.pdf>
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1302,22 +1307,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [6]
-File: ./figures/Satisfaction Questionnaire.pdf Graphic file (type pdf)
-<use ./figures/Satisfaction Questionnaire.pdf>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Package caption Warning: \label without proper reference on input line 337.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `tab:thresholds' on page 7 undefined on input line 334.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+File: ./figures/dailyvisitor.pdf Graphic file (type pdf)
+<use ./figures/dailyvisitor.pdf>
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1334,23 +1328,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [8]
-
-LaTeX Warning: Reference `fig:dailyvisitor' on page 9 undefined on input line 373.
-
-
-Overfull \hbox (0.72412pt too wide) in paragraph at lines 395--396
+Overfull \hbox (0.72412pt too wide) in paragraph at lines 414--415
 []\TU/TeXGyreTermesX(0)/b/n/12 Quadratic term of tourist numbers: \TU/TeXGyreTermesX(0)/m/n/12 Reflects the nonlinear relationship between tourism
  []
 
 File: ./figures/tournum-carbon.pdf Graphic file (type pdf)
 <use ./figures/tournum-carbon.pdf>
 
-Overfull \hbox (2.27618pt too wide) in paragraph at lines 406--407
+Overfull \hbox (2.27618pt too wide) in paragraph at lines 425--426
  [][] 
  []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1360,6 +1347,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [9]
+Overfull \hbox (1.39407pt too wide) in paragraph at lines 463--464
+[]\TU/TeXGyreTermesX(0)/b/n/12 Glacier (glacial status): \TU/TeXGyreTermesX(0)/m/n/12 Evaluated through $\OML/cmm/m/it/12 Glacier[]$ \TU/TeXGyreTermesX(0)/m/n/12 (residents’ concern about tourism-
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1368,12 +1359,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10]
-Overfull \hbox (1.39407pt too wide) in paragraph at lines 444--445
-[]\TU/TeXGyreTermesX(0)/b/n/12 Glacier (glacial status): \TU/TeXGyreTermesX(0)/m/n/12 Evaluated through $\OML/cmm/m/it/12 Glacier[]$ \TU/TeXGyreTermesX(0)/m/n/12 (residents’ concern about tourism-
- []
-
 File: sem_diagram_final.pdf Graphic file (type pdf)
 <use sem_diagram_final.pdf>
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1385,6 +1373,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [11]
+Overfull \hbox (6.53212pt too wide) in paragraph at lines 489--490
+[]\TU/TeXGyreTermesX(0)/m/n/12 According to statistical data from the American Public Transportation Association (APTA),
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1393,23 +1385,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12]
-Overfull \hbox (6.53212pt too wide) in paragraph at lines 470--471
-[]\TU/TeXGyreTermesX(0)/m/n/12 According to statistical data from the American Public Transportation Association (APTA),
- []
-
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 475.
+(Font)              scaled to size 8.0pt on input line 494.
 LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 475.
+(Font)              scaled to size 6.0pt on input line 494.
 
-Overfull \hbox (4.8219pt too wide) in paragraph at lines 528--557
+Overfull \hbox (4.8219pt too wide) in paragraph at lines 547--576
  [][] 
  []
 
 File: ./figures/NSGA_3_final.pdf Graphic file (type pdf)
 <use ./figures/NSGA_3_final.pdf>
 
-Overfull \hbox (2.27618pt too wide) in paragraph at lines 560--561
+Overfull \hbox (2.27618pt too wide) in paragraph at lines 579--580
  [][] 
  []
 
@@ -1429,12 +1417,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [14]
-Overfull \hbox (2.89613pt too wide) in paragraph at lines 569--570
+Overfull \hbox (2.89613pt too wide) in paragraph at lines 588--589
 []\TU/TeXGyreTermesX(0)/m/n/12 Considering that Juneau’s glacier tourism constitutes a nature-based destination where green-
  []
 
 
-Overfull \hbox (23.42192pt too wide) in paragraph at lines 575--583
+Overfull \hbox (23.42192pt too wide) in paragraph at lines 594--602
  [][] 
  []
 
@@ -1446,8 +1434,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [15]
-File: ./figures/continue_winning.pdf Graphic file (type pdf)
-<use ./figures/continue_winning.pdf>
+File: ./figures/sensitivityanalysis.pdf Graphic file (type pdf)
+<use ./figures/sensitivityanalysis.pdf>
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1465,11 +1453,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [17]
-File: ./figures/fig1.jpg Graphic file (type bmp)
-<./figures/fig1.jpg>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+File: ./figures/Kmeans.pdf Graphic file (type pdf)
+<use ./figures/Kmeans.pdf>
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1479,6 +1464,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [18]
+Overfull \hbox (2.42014pt too wide) in paragraph at lines 678--679
+\TU/TeXGyreTermesX(0)/m/n/12 income growth stagnation in some cities (e.g., Savannah: \TU/TeXGyreTermesX(0)/b/n/12 real_income_calculate_growth
+ []
+
+
+Overfull \hbox (7.94414pt too wide) in paragraph at lines 682--684
+\TU/TeXGyreTermesX(0)/m/n/12 Address sluggish economic growth by enhancing industrial value-added, promoting green tourism
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1487,12 +1481,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [19]
-File: ./figures/fig2.jpg Graphic file (type bmp)
-<./figures/fig2.jpg>
-
-
-LaTeX Warning: Citation '5' on page 20 undefined on input line 747.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1501,6 +1489,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [20]
+File: ./figures/dataprediction.pdf Graphic file (type pdf)
+<use ./figures/dataprediction.pdf>
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1517,14 +1508,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [22]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[23]
 File: ./figures/fig24.jpg Graphic file (type bmp)
 <./figures/fig24.jpg>
 
@@ -1535,19 +1518,126 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 976--977
-[][]$[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [] [][][][] [] [][][][][][][][][][] [] [][][][] [] [][][][][][][][] [] [][][][][][] [] [][][] []
- []
-
+[23]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.59999pt}.
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24]
+*geometry* verbose mode - [ newgeometry ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(0.0pt, 597.50787pt, 0.0pt)
+* v-part:(T,H,B)=(0.0pt, 845.04684pt, 0.0pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=597.50787pt
+* \textheight=845.04684pt
+* \oddsidemargin=-72.26999pt
+* \evensidemargin=-72.26999pt
+* \topmargin=-109.26999pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+File: ./figures/memo.pdf Graphic file (type pdf)
+<use ./figures/memo.pdf>
+
+
+LaTeX Warning: Float too large for page by 14.5125pt on input line 837.
 
 [25]
+LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/it' will be
+(Font)              scaled to size 12.0pt on input line 844.
+
+Underfull \hbox (badness 2005) in paragraph at lines 848--852
+[]\TU/TeXGyreTermesX(0)/m/n/12 Wrangell Sentinel. Tour operators will exceed visitor limit at
+ []
+
+
+Underfull \hbox (badness 6204) in paragraph at lines 848--852
+\TU/TeXGyreTermesX(0)/m/n/12 Retrieved from []$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][][][] [] [][][] [] [][][][][] [] [][][][] [] [][] [] [][] [] [][][][] []
+ []
+
+
+Overfull \hbox (16.30359pt too wide) in paragraph at lines 848--852
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--857
+[]\TU/TeXGyreTermesX(0)/m/n/12 United States Department of Agriculture. Glacier visitor data:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 854--857
+\TU/TeXGyreTermesX(0)/m/n/12 443,000. Retrieved from []$[][][][][] [] [] [] [][][] [] [][][][][][][] [] [][][] [] [][][][][][][] [] [][][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--862
+[]\TU/TeXGyreTermesX(0)/m/n/12 City of Juneau. Juneau Tourism Survey Report (2021-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 859--862
+\TU/TeXGyreTermesX(0)/m/n/12 2023). Retrieved from []$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [][][][] [] [][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--867
+[]\TU/TeXGyreTermesX(0)/m/n/12 Juneau Economic Development Council. The Juneau &
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--867
+\TU/TeXGyreTermesX(0)/m/n/12 Southeast Alaska Economic Indicators Reports (2012-2024). Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 864--867
+\TU/TeXGyreTermesX(0)/m/n/12 trieved from []$[][][][][] [] [] [] [][][] [] [][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [][][][] [] [][] []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--872
+[]\TU/TeXGyreTermesX(0)/m/n/12 City of Juneau. Juneau Visitor Circulator Study Final Re-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 869--872
+\TU/TeXGyreTermesX(0)/m/n/12 port. Retrieved from []$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][] [] [][][][] [] [][] []
+ []
+
+
+Underfull \hbox (badness 3417) in paragraph at lines 889--892
+[]\TU/TeXGyreTermesX(0)/m/n/12 National Association of Home Builders. Housing Economics: Residen-
+ []
+
+
+Underfull \hbox (badness 4429) in paragraph at lines 889--892
+\TU/TeXGyreTermesX(0)/m/n/12 tial Building Cost and Income Ratio. Retrieved from []$[][][][][] [] [] [] [][][] [] [][][][] [] [][][] []
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1555,56 +1645,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[26]
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 1010.
-
-Underfull \hbox (badness 10000) in paragraph at lines 1016--1017
-
- []
-
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1019.
-LaTeX Font Info:    Font shape `TU/TeXGyreTermesX(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 1019.
-LaTeX Font Info:    Trying to load font information for TU+pcr on input line 1019.
-LaTeX Font Info:    No file TUpcr.fd. on input line 1019.
-
-LaTeX Font Warning: Font shape `TU/pcr/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 1019.
-
-(./code/mcmthesis-matlab1.m
-
-LaTeX Font Warning: Font shape `TU/pcr/b/n' undefined
-(Font)              using `TU/pcr/m/n' instead on input line 1.
-
-) (./code/mcmthesis-sudoku.cpp
-Overfull \hbox (15.03687pt too wide) in paragraph at lines 1--2
-[][][][][][][][][] 
- []
+[26
 
 
-Overfull \hbox (15.03687pt too wide) in paragraph at lines 7--9
-[][][][][][][][][] 
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[27])
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[28]
+]
 \c@lastpage=\count505
- [29] 
+ [27] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./mcmthesis-demo.aux)
  ***********
@@ -1613,16 +1659,10 @@ L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `mcmthesis-demo.out' has not changed.
-(rerunfilecheck)             Checksum: 1B5D293BF1EDAC60C4A202BFA5F43712;9998.
+(rerunfilecheck)             Checksum: F4BFBBE5B6B927FC5D2384B74EDB0BA1;6572.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                mcmthesis-demo
@@ -1633,12 +1673,12 @@ Package logreq Info: Writing requests to 'mcmthesis-demo.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33233 strings out of 476720
- 691924 string characters out of 5801444
- 1968842 words of memory out of 5000000
- 54788 multiletter control sequences out of 15000+600000
- 576237 words of font info for 118 fonts, out of 8000000 for 9000
+ 32499 strings out of 476720
+ 683979 string characters out of 5801444
+ 1960842 words of memory out of 5000000
+ 54065 multiletter control sequences out of 15000+600000
+ 576184 words of font info for 116 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 87i,18n,117p,1879b,2557s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,13n,117p,1879b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mcmthesis-demo.pdf (29 pages).
+Output written on mcmthesis-demo.pdf (27 pages).
